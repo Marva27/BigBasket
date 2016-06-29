@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Big Basket]" parallel="classes">
+  <test name="BigBasket">
+    <packages>
+      <package name="com.bigbasket.customer"/>
+      <package name="com.bigbakset.customer.myaccount"/>
+      <package name="com.bigbasket.products"/>
+    </packages>
+    <classes>
+      <class name="com.bigbasket.customer.ForgotPasswordTest"/>
+      <class name="com.bigbasket.customer.SignInTest"/>
+      <class name="com.bigbasket.customer.SignUpTest"/>
+      <class name="com.bigbakset.customer.myaccount.ChangePasswordTest"/>
+      <class name="com.bigbakset.customer.myaccount.DeliveryAddressTest"/>
+      <class name="com.bigbakset.customer.myaccount.EditProfileTest"/>
+      <class name="com.bigbakset.customer.myaccount.EmailAddressesTest"/>
+      <class name="com.bigbasket.products.SearchAndFilterProductsTest"/>
+    </classes>
+  </test> <!-- BigBasket -->
+  <test name="BigBasket(failed)" parallel="classes">
+    <classes>
+      <class name="com.bigbasket.products.SearchAndFilterProductsTest">
+        <methods>
+          <include name="searchProductAndFilterByDiscountTest" invocation-numbers="0 1 2 3 4"/>
+          <include name="SearchProductAndFilterByBrandTest" invocation-numbers="0 1"/>
+          <include name="loadProperties"/>
+        </methods>
+      </class> <!-- com.bigbasket.products.SearchAndFilterProductsTest -->
+      <class name="com.bigbakset.customer.myaccount.EmailAddressesTest">
+        <methods>
+          <include name="addEmailAddressTest" invocation-numbers="3"/>
+          <include name="loadProperties"/>
+        </methods>
+      </class> <!-- com.bigbakset.customer.myaccount.EmailAddressesTest -->
+      <class name="com.bigbasket.customer.SignInTest">
+        <methods>
+          <include name="signInTest" invocation-numbers="1"/>
+          <include name="loadProperties"/>
+        </methods>
+      </class> <!-- com.bigbasket.customer.SignInTest -->
+      <class name="com.bigbasket.customer.SignUpTest">
+        <methods>
+          <include name="loadProperties"/>
+        </methods>
+      </class> <!-- com.bigbasket.customer.SignUpTest -->
+      <class name="com.bigbasket.customer.ForgotPasswordTest">
+        <methods>
+          <include name="clearLogsAndReports"/>
+          <include name="afterSuite"/>
+          <include name="loadProperties"/>
+        </methods>
+      </class> <!-- com.bigbasket.customer.ForgotPasswordTest -->
+      <class name="com.bigbakset.customer.myaccount.ChangePasswordTest">
+        <methods>
+          <include name="loadProperties"/>
+        </methods>
+      </class> <!-- com.bigbakset.customer.myaccount.ChangePasswordTest -->
+    </classes>
+  </test> <!-- BigBasket(failed) -->
+</suite> <!-- Failed suite [Big Basket] -->

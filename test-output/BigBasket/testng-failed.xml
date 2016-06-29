@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [BigBasket]" parallel="classes">
+  <test name="Customer">
+    <packages>
+      <package name="com.bigbasket.customer"/>
+    </packages>
+    <classes>
+      <class name="com.bigbasket.customer.PersonalDetailsTest"/>
+      <class name="com.bigbasket.customer.SignInTest"/>
+    </classes>
+  </test> <!-- Customer -->
+  <test name="Customer(failed)" parallel="classes">
+    <classes>
+      <class name="com.bigbasket.customer.SignInTest">
+        <methods>
+          <include name="signInTest" invocation-numbers="1"/>
+          <include name="loadProperties"/>
+        </methods>
+      </class> <!-- com.bigbasket.customer.SignInTest -->
+      <class name="com.bigbasket.customer.PersonalDetailsTest">
+        <methods>
+          <include name="changePasswordTest" invocation-numbers="0 1 2 3 4 5 6"/>
+          <include name="clearLogsAndReports"/>
+          <include name="afterSuite"/>
+          <include name="loadProperties"/>
+          <include name="addEmailAddressTest" invocation-numbers="0 1 2 3 4"/>
+        </methods>
+      </class> <!-- com.bigbasket.customer.PersonalDetailsTest -->
+    </classes>
+  </test> <!-- Customer(failed) -->
+</suite> <!-- Failed suite [BigBasket] -->

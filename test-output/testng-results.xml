@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="7" failed="2" total="35" passed="26">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Big Basket" duration-ms="514489" started-at="2016-06-29T11:01:54Z" finished-at="2016-06-29T11:10:28Z">
+    <groups>
+    </groups>
+    <test name="BigBasket" duration-ms="514489" started-at="2016-06-29T11:01:54Z" finished-at="2016-06-29T11:10:28Z">
+      <class name="com.bigbasket.products.SearchAndFilterProductsTest">
+        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="loadProperties" is-config="true" duration-ms="14" started-at="2016-06-29T07:01:54Z" finished-at="2016-06-29T07:01:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadProperties -->
+        <test-method status="SKIP" signature="SearchProductAndFilterByBrandTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="SearchProductAndFilterByBrandTest" duration-ms="173" started-at="2016-06-29T07:01:56Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product Name=Orange, Case=CASE_OK, Brands=24 Mantra,Glucon-D,Naturo, Runmode=Y, Iteration=1, Browser=Mozilla}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping the test SearchProductAndFilterByBrandTest as the Runmode of Test Case is found to be NO.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping the test SearchProductAndFilterByBrandTest as the Runmode of Test Case is found to be NO.
+	at com.bigbasket.framework.util.Utility.checkRunModes(Utility.java:121)
+	at com.bigbasket.products.SearchAndFilterProductsTest.SearchProductAndFilterByBrandTest(SearchAndFilterProductsTest.java:175)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchProductAndFilterByBrandTest -->
+        <test-method status="SKIP" signature="SearchProductAndFilterByBrandTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="SearchProductAndFilterByBrandTest" duration-ms="131" started-at="2016-06-29T07:01:56Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product Name=Perfume, Case=CASE_OK, Brands=Axe,XXX,Spinz, Runmode=Y, Iteration=2, Browser=Mozilla}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping the test SearchProductAndFilterByBrandTest as the Runmode of Test Case is found to be NO.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping the test SearchProductAndFilterByBrandTest as the Runmode of Test Case is found to be NO.
+	at com.bigbasket.framework.util.Utility.checkRunModes(Utility.java:121)
+	at com.bigbasket.products.SearchAndFilterProductsTest.SearchProductAndFilterByBrandTest(SearchAndFilterProductsTest.java:175)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SearchProductAndFilterByBrandTest -->
+        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByDiscountTest" duration-ms="126" started-at="2016-06-29T07:01:56Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product Name=Orange, Case=UPTO 5%, Discount Range=Upto 5%, Runmode=Y, Iteration=1, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.
+	at com.bigbasket.framework.util.Utility.checkRunModes(Utility.java:121)
+	at com.bigbasket.products.SearchAndFilterProductsTest.searchProductAndFilterByDiscountTest(SearchAndFilterProductsTest.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductAndFilterByDiscountTest -->
+        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByDiscountTest" duration-ms="106" started-at="2016-06-29T07:01:56Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product Name=Apple, Case=5% - 10%, Discount Range=5% - 10%, Runmode=Y, Iteration=2, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.
+	at com.bigbasket.framework.util.Utility.checkRunModes(Utility.java:121)
+	at com.bigbasket.products.SearchAndFilterProductsTest.searchProductAndFilterByDiscountTest(SearchAndFilterProductsTest.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductAndFilterByDiscountTest -->
+        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByDiscountTest" duration-ms="133" started-at="2016-06-29T07:01:56Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product Name=Perfume, Case=10% - 15%, Discount Range=10% - 15%, Runmode=Y, Iteration=3, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.
+	at com.bigbasket.framework.util.Utility.checkRunModes(Utility.java:121)
+	at com.bigbasket.products.SearchAndFilterProductsTest.searchProductAndFilterByDiscountTest(SearchAndFilterProductsTest.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductAndFilterByDiscountTest -->
+        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByDiscountTest" duration-ms="104" started-at="2016-06-29T07:01:57Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product Name=Soap, Case=15% - 25%, Discount Range=15% - 25%, Runmode=Y, Iteration=4, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.
+	at com.bigbasket.framework.util.Utility.checkRunModes(Utility.java:121)
+	at com.bigbasket.products.SearchAndFilterProductsTest.searchProductAndFilterByDiscountTest(SearchAndFilterProductsTest.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductAndFilterByDiscountTest -->
+        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByDiscountTest" duration-ms="96" started-at="2016-06-29T07:01:57Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product Name=Drinks, Case=MORE THAN 25%, Discount Range=More than 25%, Runmode=Y, Iteration=5, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.
+	at com.bigbasket.framework.util.Utility.checkRunModes(Utility.java:121)
+	at com.bigbasket.products.SearchAndFilterProductsTest.searchProductAndFilterByDiscountTest(SearchAndFilterProductsTest.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductAndFilterByDiscountTest -->
+        <test-method status="PASS" signature="searchProductAndFilterByPriceTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByPriceTest" duration-ms="24556" started-at="2016-06-29T07:01:57Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:02:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product Name=Orange, Case=< Rs 20, Price Range=Less than Rs 20, Runmode=Y, Iteration=1, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductAndFilterByPriceTest -->
+        <test-method status="PASS" signature="searchProductAndFilterByPriceTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByPriceTest" duration-ms="13675" started-at="2016-06-29T07:02:21Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:02:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product Name=Orange, Case=Rs 21 to Rs 50, Price Range=Rs 21 to Rs 50, Runmode=Y, Iteration=2, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductAndFilterByPriceTest -->
+        <test-method status="PASS" signature="searchProductAndFilterByPriceTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByPriceTest" duration-ms="13139" started-at="2016-06-29T07:02:35Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:02:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Product Name=Orange, Case=Rs 51 to Rs 100, Price Range=Rs 51 to Rs 100, Runmode=Y, Iteration=3, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProductAndFilterByPriceTest -->
+      </class> <!-- com.bigbasket.products.SearchAndFilterProductsTest -->
+      <class name="com.bigbasket.customer.ForgotPasswordTest">
+        <test-method status="PASS" signature="clearLogsAndReports()[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@7c03092a]" name="clearLogsAndReports" is-config="true" duration-ms="171" started-at="2016-06-29T07:01:54Z" finished-at="2016-06-29T07:01:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearLogsAndReports -->
+        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@7c03092a]" name="loadProperties" is-config="true" duration-ms="14" started-at="2016-06-29T07:01:54Z" finished-at="2016-06-29T07:01:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadProperties -->
+        <test-method status="PASS" signature="forgotPasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@7c03092a]" name="forgotPasswordTest" duration-ms="27165" started-at="2016-06-29T07:01:56Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:02:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_OK, Email Address=srinimarva@gmail.com, Alert Message=, Runmode=Y, Iteration=1, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPasswordTest -->
+        <test-method status="PASS" signature="forgotPasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@7c03092a]" name="forgotPasswordTest" duration-ms="7536" started-at="2016-06-29T07:02:23Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:02:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_MISSING_EMAIL, Email Address=, Alert Message=Please Enter Email, Runmode=Y, Iteration=2, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPasswordTest -->
+        <test-method status="PASS" signature="forgotPasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@7c03092a]" name="forgotPasswordTest" duration-ms="9115" started-at="2016-06-29T07:02:30Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:02:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_INVALID_EMAIL, Email Address=lokesh.kittu@gmail.com, Alert Message=Invalid Email, Runmode=Y, Iteration=3, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPasswordTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@7c03092a]" name="afterSuite" is-config="true" duration-ms="664" started-at="2016-06-29T07:10:29Z" finished-at="2016-06-29T07:10:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.bigbasket.customer.ForgotPasswordTest -->
+      <class name="com.bigbakset.customer.myaccount.EmailAddressesTest">
+        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="loadProperties" is-config="true" duration-ms="12" started-at="2016-06-29T07:04:30Z" finished-at="2016-06-29T07:04:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadProperties -->
+        <test-method status="PASS" signature="addEmailAddressTest(java.util.Hashtable)[pri:1, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="addEmailAddressTest" duration-ms="223182" started-at="2016-06-29T07:04:30Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:08:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_MISSING_EMAIL, Email Address=, Alert Message=Please enter an email address, Runmode=Y, Iteration=1, Browser=Mozilla}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmailAddressTest -->
+        <test-method status="PASS" signature="addEmailAddressTest(java.util.Hashtable)[pri:1, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="addEmailAddressTest" duration-ms="27912" started-at="2016-06-29T07:08:14Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:08:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_INVALID_EMAIL, Email Address=sri, Alert Message=Please enter a valid email address, Runmode=Y, Iteration=2, Browser=Mozilla}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmailAddressTest -->
+        <test-method status="PASS" signature="addEmailAddressTest(java.util.Hashtable)[pri:1, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="addEmailAddressTest" duration-ms="19692" started-at="2016-06-29T07:08:41Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:09:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_EXISTING_EMAIL, Email Address=srinimarva@gmail.com, Alert Message=This email address is already in use by you., Runmode=Y, Iteration=3, Browser=Mozilla}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmailAddressTest -->
+        <test-method status="FAIL" signature="addEmailAddressTest(java.util.Hashtable)[pri:1, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="addEmailAddressTest" duration-ms="20594" started-at="2016-06-29T07:09:01Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:09:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_OK, Email Address=aroon.irs@gmail.com, Alert Message=, Runmode=Y, Iteration=4, Browser=Mozilla}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[FAIL]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: FAIL
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.bigbasket.framework.util.UtilFunctions.writeHTMLResult(UtilFunctions.java:49)
+	at com.bigbakset.customer.myaccount.EmailAddressesTest.addEmailAddressTest(EmailAddressesTest.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmailAddressTest -->
+        <test-method status="PASS" signature="removeEmailAddressTest(java.util.Hashtable)[pri:2, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="removeEmailAddressTest" duration-ms="39038" started-at="2016-06-29T07:09:22Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:10:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_CANCEL, Runmode=Y, Iteration=1, Browser=Mozilla}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeEmailAddressTest -->
+        <test-method status="PASS" signature="removeEmailAddressTest(java.util.Hashtable)[pri:2, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="removeEmailAddressTest" duration-ms="27328" started-at="2016-06-29T07:10:01Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:10:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_OK, Runmode=Y, Iteration=2, Browser=Mozilla}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeEmailAddressTest -->
+      </class> <!-- com.bigbakset.customer.myaccount.EmailAddressesTest -->
+      <class name="com.bigbasket.customer.SignInTest">
+        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="loadProperties" is-config="true" duration-ms="18" started-at="2016-06-29T07:02:40Z" finished-at="2016-06-29T07:02:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadProperties -->
+        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="32068" started-at="2016-06-29T07:02:40Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_OK, Email Address=srinimarva@gmail.com, Alert Message=, Password=Orange@32, Runmode=Y, Iteration=1, Customer Name=SRINIVASAN, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInTest -->
+        <test-method status="FAIL" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="12000" started-at="2016-06-29T07:03:12Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:24Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_OK, Email Address=srinimarva@gmail.com, Alert Message=, Password=Orange@31, Runmode=Y, Iteration=2, Customer Name=SRINIVASAN, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[FAIL - Incorrect credentials]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: FAIL - Incorrect credentials
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.bigbasket.framework.util.UtilFunctions.writeHTMLResult(UtilFunctions.java:49)
+	at com.bigbasket.customer.SignInTest.signInTest(SignInTest.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInTest -->
+        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="14206" started-at="2016-06-29T07:03:24Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_INVALID_EMAIL, Email Address=, Alert Message=Enter a valid e-mail address., Password=Orange@27, Runmode=Y, Iteration=3, Customer Name=Srinivasan, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInTest -->
+        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="14085" started-at="2016-06-29T07:03:38Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_INVALID_CREDENTIALS, Email Address=srinimarva@gmail.com, Alert Message=Invalid email or password, Password=Ora, Runmode=Y, Iteration=4, Customer Name=Srinivasan, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInTest -->
+        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="8940" started-at="2016-06-29T07:03:52Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:04:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_INVALID_PASSWORD, Email Address=srinimarva@gmail.com, Alert Message=Enter a valid password, Password=, Runmode=Y, Iteration=5, Customer Name=Srinivasan, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInTest -->
+        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="20915" started-at="2016-06-29T07:04:01Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:04:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_FACEBOOK_LOGIN, Email Address=mailtorsrinivasan@gmail.com, Alert Message=, Password=Orange@7, Runmode=Y, Iteration=6, Customer Name=Srinivasan, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInTest -->
+        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="30813" started-at="2016-06-29T07:04:22Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:04:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_GOOGLE_LOGIN, Email Address=srinimarva@gmail.com, Alert Message=, Password=Orange@27, Runmode=Y, Iteration=7, Customer Name=Srinivasan, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInTest -->
+      </class> <!-- com.bigbasket.customer.SignInTest -->
+      <class name="com.bigbasket.customer.SignUpTest">
+        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbasket.customer.SignUpTest@485b13dd]" name="loadProperties" is-config="true" duration-ms="20" started-at="2016-06-29T07:02:48Z" finished-at="2016-06-29T07:02:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadProperties -->
+        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@485b13dd]" name="signUpTest" duration-ms="18141" started-at="2016-06-29T07:02:48Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email Address=lokesh.kittu@gmail.com, Case=CASE_MISSING_FIRST_NAME, First Name=, Runmode=Y, Iteration=1, Password=Orange@27, Browser=Mozilla, Alert Message=Enter a first name., Last Name=Balaraman}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpTest -->
+        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@485b13dd]" name="signUpTest" duration-ms="12865" started-at="2016-06-29T07:03:07Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email Address=lokesh.kittu@gmail.com, Case=CASE_MISSING_LAST_NAME, First Name=Lokesh, Runmode=Y, Iteration=2, Password=Orange@27, Browser=Mozilla, Alert Message=Enter a last name., Last Name=}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpTest -->
+        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@485b13dd]" name="signUpTest" duration-ms="32323" started-at="2016-06-29T07:03:19Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email Address=, Case=CASE_MISSING_EMAIL_ADDRESS, First Name=Lokesh, Runmode=Y, Iteration=3, Password=Orange@27, Browser=Mozilla, Alert Message=Enter a valid e-mail address., Last Name=Balaraman}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpTest -->
+        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@485b13dd]" name="signUpTest" duration-ms="13067" started-at="2016-06-29T07:03:52Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:04:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email Address=lokesh.kittu@gmail.com, Case=CASE_MISSING_PASSWORD, First Name=Lokesh, Runmode=Y, Iteration=4, Password=, Browser=Mozilla, Alert Message=Please enter at least 8 characters, Last Name=Balaraman}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpTest -->
+        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@485b13dd]" name="signUpTest" duration-ms="25454" started-at="2016-06-29T07:04:05Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:04:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Email Address=lokesh.kittu@gmail.com, Case=CASE_MISSING_CAPTCHA, First Name=Lokesh, Runmode=y, Iteration=5, Password=Orange@27, Browser=Mozilla, Alert Message=Enter the string in image, Last Name=Balaraman}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpTest -->
+      </class> <!-- com.bigbasket.customer.SignUpTest -->
+      <class name="com.bigbakset.customer.myaccount.ChangePasswordTest">
+        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@53753747]" name="loadProperties" is-config="true" duration-ms="14" started-at="2016-06-29T07:01:54Z" finished-at="2016-06-29T07:01:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadProperties -->
+        <test-method status="PASS" signature="changePasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@53753747]" name="changePasswordTest" duration-ms="70153" started-at="2016-06-29T07:01:56Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:03:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Old Password=, Case=CASE_FIELD_REQUIRED, Alert Message=This field is required., Runmode=Y, Iteration=1, Confirm Password=, New Password=, Browser=Mozilla}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changePasswordTest -->
+        <test-method status="PASS" signature="changePasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@53753747]" name="changePasswordTest" duration-ms="44687" started-at="2016-06-29T07:03:06Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:03:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Old Password=Orange@32, Case=CASE_PASSWORD_REQUIREMENT, Alert Message=Please enter at least 8 characters, Runmode=Y, Iteration=2, Confirm Password=Orange@32, New Password=Ora, Browser=Mozilla}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changePasswordTest -->
+        <test-method status="PASS" signature="changePasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@53753747]" name="changePasswordTest" duration-ms="46105" started-at="2016-06-29T07:03:51Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:04:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Old Password=Orange@32, Case=CASE_PASSWORD_MISMATCH, Alert Message=Password mismatch, Runmode=Y, Iteration=3, Confirm Password=Orange@33, New Password=Orange@32, Browser=Mozilla}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changePasswordTest -->
+        <test-method status="PASS" signature="changePasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@53753747]" name="changePasswordTest" duration-ms="83181" started-at="2016-06-29T07:04:37Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:06:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Old Password=Orange@32, Case=CASE_OK, Alert Message=Successfully updated the password., Runmode=Y, Iteration=4, Confirm Password=Orange@32, New Password=Orange@32, Browser=Mozilla}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changePasswordTest -->
+      </class> <!-- com.bigbakset.customer.myaccount.ChangePasswordTest -->
+    </test> <!-- BigBasket -->
+  </suite> <!-- Big Basket -->
+</testng-results>

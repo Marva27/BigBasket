@@ -1,20 +1,20 @@
-2016-06-29 07:09:22,411 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting RemoveEmailAddressTest_CASE_CANCEL_1
-2016-06-29 07:09:22,411 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Executing RemoveEmailAddressTest_CASE_CANCEL_1 using {Case=CASE_CANCEL, Runmode=Y, Iteration=1, Browser=Mozilla}
-2016-06-29 07:09:22,411 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting function openBrowser - Mozilla
-2016-06-29 07:09:22,411 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] {Mozilla=null, Chrome=null, IE=null}
-2016-06-29 07:09:22,411 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Opening fresh browser - Mozilla
-2016-06-29 07:09:29,677 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting connectURL function trying to connect http://www.bigbasket.com
-2016-06-29 07:09:32,601 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending connectURL function PASS
-2016-06-29 07:09:32,603 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting function clickSkipAndExplore in HomePage.class
-2016-06-29 07:09:36,809 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending function clickSkipAndExplore in HomePage.class with PASS
-2016-06-29 07:09:36,810 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting function clickLOGINLink in HomePage.class
-2016-06-29 07:09:37,046 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending function clickLOGINLink in HomePage.class with PASS
-2016-06-29 07:09:37,048 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting doLogin function in SignInPage.class
-2016-06-29 07:09:56,972 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending doLogin function in SignInPage.class with PASS
-2016-06-29 07:09:56,972 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting function selectMyAccount in MyAccountPage.class
-2016-06-29 07:09:57,257 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending function selectMyAccount in MyAccountPage.class
-2016-06-29 07:09:57,258 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting function clickEmailAddressesLink in ChangePasswordPage.class
-2016-06-29 07:09:58,984 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending function clickEmailAddressesLink in ChangePasswordPage.class
-2016-06-29 07:10:00,602 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending function verifyEmailAddressesPage in EmailAddressesPage.class PASS
-2016-06-29 07:10:00,603 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting function removeEmailAddress in EmailAddressesPage.class
-2016-06-29 07:10:01,334 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending RemoveEmailAddressTest_CASE_CANCEL_1
+2016-06-29 08:10:56,420 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting RemoveEmailAddressTest_CASE_CANCEL_1
+2016-06-29 08:10:56,420 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Executing RemoveEmailAddressTest_CASE_CANCEL_1 using {Case=CASE_CANCEL, Runmode=Y, Iteration=1, Browser=Mozilla}
+2016-06-29 08:10:56,421 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting function openBrowser - Mozilla
+2016-06-29 08:10:56,421 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] {Mozilla=null, Chrome=null, IE=null}
+2016-06-29 08:10:56,421 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Opening fresh browser - Mozilla
+2016-06-29 08:11:01,961 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting connectURL function trying to connect http://www.bigbasket.com
+2016-06-29 08:11:05,582 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending connectURL function PASS
+2016-06-29 08:11:05,583 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting function clickSkipAndExplore in HomePage.class
+2016-06-29 08:11:08,526 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-29 08:11:08,526 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting function clickLOGINLink in HomePage.class
+2016-06-29 08:11:08,845 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending function clickLOGINLink in HomePage.class with PASS
+2016-06-29 08:11:08,846 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting doLogin function in SignInPage.class
+2016-06-29 08:11:27,793 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending doLogin function in SignInPage.class with PASS
+2016-06-29 08:11:27,801 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting function selectMyAccount in MyAccountPage.class
+2016-06-29 08:11:28,116 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending function selectMyAccount in MyAccountPage.class
+2016-06-29 08:11:28,118 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting function clickEmailAddressesLink in ChangePasswordPage.class
+2016-06-29 08:11:29,652 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending function clickEmailAddressesLink in ChangePasswordPage.class
+2016-06-29 08:11:31,097 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending function verifyEmailAddressesPage in EmailAddressesPage.class PASS
+2016-06-29 08:11:31,097 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Starting function removeEmailAddress in EmailAddressesPage.class
+2016-06-29 08:11:31,490 DEBUG [RemoveEmailAddressTest_CASE_CANCEL_1] Ending RemoveEmailAddressTest_CASE_CANCEL_1

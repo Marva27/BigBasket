@@ -1,14 +1,14 @@
-2016-06-29 07:02:22,309 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Starting SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2
-2016-06-29 07:02:22,309 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Executing SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2 using {Product Name=Orange, Case=Rs 21 to Rs 50, Price Range=Rs 21 to Rs 50, Runmode=Y, Iteration=2, Browser=Chrome}
-2016-06-29 07:02:22,309 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Starting function openBrowser - Chrome
-2016-06-29 07:02:22,309 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] {Mozilla=null, Chrome=RemoteWebDriver: chrome on MAC (9269e795-7efe-4926-af6a-fa1fb615023d), IE=null}
-2016-06-29 07:02:22,310 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Using existing browser - Chrome
-2016-06-29 07:02:24,825 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Starting function clickSkipAndExplore in HomePage.class
-2016-06-29 07:02:27,604 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Ending function clickSkipAndExplore in HomePage.class with PASS
-2016-06-29 07:02:27,608 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Starting function searchProduct in SearchResultsPage.class
-2016-06-29 07:02:31,382 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Ending function searchProduct in SearchResultsPage.class
-2016-06-29 07:02:31,388 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Starting function filterByPriceRange in SearchResultsPage.class
-2016-06-29 07:02:33,061 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Ending function filterByPriceRange in SearchResultsPage.class
-2016-06-29 07:02:34,067 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Starting function verifySearchResultsByPriceRange in SearchResultsPage.class
-2016-06-29 07:02:35,600 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Ending function verifySearchResultsByPriceRange in SearchResultsPage.class with PASS
-2016-06-29 07:02:35,601 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Ending SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2
+2016-06-29 08:03:35,873 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Starting SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2
+2016-06-29 08:03:35,975 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Executing SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2 using {Product Name=Orange, Case=Rs 21 to Rs 50, Price Range=Rs 21 to Rs 50, Runmode=Y, Iteration=2, Browser=Chrome}
+2016-06-29 08:03:35,975 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Starting function openBrowser - Chrome
+2016-06-29 08:03:35,975 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] {Mozilla=null, Chrome=RemoteWebDriver: chrome on MAC (4ab414dc-26e2-419e-afc0-10317d89d59a), IE=null}
+2016-06-29 08:03:35,976 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Using existing browser - Chrome
+2016-06-29 08:03:39,475 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Starting function clickSkipAndExplore in HomePage.class
+2016-06-29 08:03:42,292 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-29 08:03:42,295 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Starting function searchProduct in SearchResultsPage.class
+2016-06-29 08:03:45,512 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Ending function searchProduct in SearchResultsPage.class
+2016-06-29 08:03:45,516 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Starting function filterByPriceRange in SearchResultsPage.class
+2016-06-29 08:03:47,321 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Ending function filterByPriceRange in SearchResultsPage.class
+2016-06-29 08:03:48,338 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Starting function verifySearchResultsByPriceRange in SearchResultsPage.class
+2016-06-29 08:03:49,785 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Ending function verifySearchResultsByPriceRange in SearchResultsPage.class with PASS
+2016-06-29 08:03:49,785 DEBUG [SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2] Ending SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2

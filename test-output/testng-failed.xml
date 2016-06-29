@@ -20,25 +20,11 @@
   </test> <!-- BigBasket -->
   <test name="BigBasket(failed)" parallel="classes">
     <classes>
-      <class name="com.bigbasket.products.SearchAndFilterProductsTest">
+      <class name="com.bigbakset.customer.myaccount.ChangePasswordTest">
         <methods>
-          <include name="searchProductAndFilterByDiscountTest" invocation-numbers="0 1 2 3 4"/>
-          <include name="SearchProductAndFilterByBrandTest" invocation-numbers="0 1"/>
           <include name="loadProperties"/>
         </methods>
-      </class> <!-- com.bigbasket.products.SearchAndFilterProductsTest -->
-      <class name="com.bigbakset.customer.myaccount.EmailAddressesTest">
-        <methods>
-          <include name="addEmailAddressTest" invocation-numbers="3"/>
-          <include name="loadProperties"/>
-        </methods>
-      </class> <!-- com.bigbakset.customer.myaccount.EmailAddressesTest -->
-      <class name="com.bigbasket.customer.SignInTest">
-        <methods>
-          <include name="signInTest" invocation-numbers="1"/>
-          <include name="loadProperties"/>
-        </methods>
-      </class> <!-- com.bigbasket.customer.SignInTest -->
+      </class> <!-- com.bigbakset.customer.myaccount.ChangePasswordTest -->
       <class name="com.bigbasket.customer.SignUpTest">
         <methods>
           <include name="loadProperties"/>
@@ -51,11 +37,25 @@
           <include name="loadProperties"/>
         </methods>
       </class> <!-- com.bigbasket.customer.ForgotPasswordTest -->
-      <class name="com.bigbakset.customer.myaccount.ChangePasswordTest">
+      <class name="com.bigbakset.customer.myaccount.EmailAddressesTest">
         <methods>
+          <include name="addEmailAddressTest" invocation-numbers="3"/>
           <include name="loadProperties"/>
         </methods>
-      </class> <!-- com.bigbakset.customer.myaccount.ChangePasswordTest -->
+      </class> <!-- com.bigbakset.customer.myaccount.EmailAddressesTest -->
+      <class name="com.bigbasket.customer.SignInTest">
+        <methods>
+          <include name="signInTest" invocation-numbers="1"/>
+          <include name="loadProperties"/>
+        </methods>
+      </class> <!-- com.bigbasket.customer.SignInTest -->
+      <class name="com.bigbasket.products.SearchAndFilterProductsTest">
+        <methods>
+          <include name="searchProductAndFilterByDiscountTest" invocation-numbers="0 1 2 3 4"/>
+          <include name="SearchProductAndFilterByBrandTest" invocation-numbers="0 1"/>
+          <include name="loadProperties"/>
+        </methods>
+      </class> <!-- com.bigbasket.products.SearchAndFilterProductsTest -->
     </classes>
   </test> <!-- BigBasket(failed) -->
 </suite> <!-- Failed suite [Big Basket] -->

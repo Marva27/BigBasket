@@ -2,16 +2,63 @@
 <testng-results skipped="7" failed="2" total="35" passed="26">
   <reporter-output>
   </reporter-output>
-  <suite name="Big Basket" duration-ms="514489" started-at="2016-06-29T11:01:54Z" finished-at="2016-06-29T11:10:28Z">
+  <suite name="Big Basket" duration-ms="529303" started-at="2016-06-29T12:03:00Z" finished-at="2016-06-29T12:11:50Z">
     <groups>
     </groups>
-    <test name="BigBasket" duration-ms="514489" started-at="2016-06-29T11:01:54Z" finished-at="2016-06-29T11:10:28Z">
-      <class name="com.bigbasket.products.SearchAndFilterProductsTest">
-        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="loadProperties" is-config="true" duration-ms="14" started-at="2016-06-29T07:01:54Z" finished-at="2016-06-29T07:01:54Z">
+    <test name="BigBasket" duration-ms="529303" started-at="2016-06-29T12:03:00Z" finished-at="2016-06-29T12:11:50Z">
+      <class name="com.bigbasket.customer.ForgotPasswordTest">
+        <test-method status="PASS" signature="clearLogsAndReports()[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@485b13dd]" name="clearLogsAndReports" is-config="true" duration-ms="56" started-at="2016-06-29T08:03:00Z" finished-at="2016-06-29T08:03:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearLogsAndReports -->
+        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@485b13dd]" name="loadProperties" is-config="true" duration-ms="21" started-at="2016-06-29T08:03:00Z" finished-at="2016-06-29T08:03:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadProperties -->
-        <test-method status="SKIP" signature="SearchProductAndFilterByBrandTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="SearchProductAndFilterByBrandTest" duration-ms="173" started-at="2016-06-29T07:01:56Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:56Z">
+        <test-method status="PASS" signature="forgotPasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@485b13dd]" name="forgotPasswordTest" duration-ms="36174" started-at="2016-06-29T08:03:02Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:03:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_OK, Email Address=srinimarva@gmail.com, Alert Message=, Runmode=Y, Iteration=1, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPasswordTest -->
+        <test-method status="PASS" signature="forgotPasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@485b13dd]" name="forgotPasswordTest" duration-ms="10533" started-at="2016-06-29T08:03:38Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:03:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_MISSING_EMAIL, Email Address=, Alert Message=Please Enter Email, Runmode=Y, Iteration=2, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPasswordTest -->
+        <test-method status="PASS" signature="forgotPasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@485b13dd]" name="forgotPasswordTest" duration-ms="10650" started-at="2016-06-29T08:03:49Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:03:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Case=CASE_INVALID_EMAIL, Email Address=lokesh.kittu@gmail.com, Alert Message=Invalid Email, Runmode=Y, Iteration=3, Browser=Chrome}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPasswordTest -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@485b13dd]" name="afterSuite" is-config="true" duration-ms="1339" started-at="2016-06-29T08:11:50Z" finished-at="2016-06-29T08:11:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.bigbasket.customer.ForgotPasswordTest -->
+      <class name="com.bigbasket.products.SearchAndFilterProductsTest">
+        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@14c8e61]" name="loadProperties" is-config="true" duration-ms="19" started-at="2016-06-29T08:03:00Z" finished-at="2016-06-29T08:03:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadProperties -->
+        <test-method status="SKIP" signature="SearchProductAndFilterByBrandTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@14c8e61]" name="SearchProductAndFilterByBrandTest" duration-ms="239" started-at="2016-06-29T08:03:02Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T08:03:02Z">
           <params>
             <param index="0">
               <value>
@@ -46,7 +93,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchProductAndFilterByBrandTest -->
-        <test-method status="SKIP" signature="SearchProductAndFilterByBrandTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="SearchProductAndFilterByBrandTest" duration-ms="131" started-at="2016-06-29T07:01:56Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:56Z">
+        <test-method status="SKIP" signature="SearchProductAndFilterByBrandTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@14c8e61]" name="SearchProductAndFilterByBrandTest" duration-ms="198" started-at="2016-06-29T08:03:02Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T08:03:02Z">
           <params>
             <param index="0">
               <value>
@@ -81,7 +128,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchProductAndFilterByBrandTest -->
-        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByDiscountTest" duration-ms="126" started-at="2016-06-29T07:01:56Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:56Z">
+        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@14c8e61]" name="searchProductAndFilterByDiscountTest" duration-ms="97" started-at="2016-06-29T08:03:02Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T08:03:03Z">
           <params>
             <param index="0">
               <value>
@@ -116,7 +163,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProductAndFilterByDiscountTest -->
-        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByDiscountTest" duration-ms="106" started-at="2016-06-29T07:01:56Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:56Z">
+        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@14c8e61]" name="searchProductAndFilterByDiscountTest" duration-ms="92" started-at="2016-06-29T08:03:03Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T08:03:03Z">
           <params>
             <param index="0">
               <value>
@@ -151,7 +198,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProductAndFilterByDiscountTest -->
-        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByDiscountTest" duration-ms="133" started-at="2016-06-29T07:01:56Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:57Z">
+        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@14c8e61]" name="searchProductAndFilterByDiscountTest" duration-ms="97" started-at="2016-06-29T08:03:03Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T08:03:03Z">
           <params>
             <param index="0">
               <value>
@@ -186,7 +233,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProductAndFilterByDiscountTest -->
-        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByDiscountTest" duration-ms="104" started-at="2016-06-29T07:01:57Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:57Z">
+        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@14c8e61]" name="searchProductAndFilterByDiscountTest" duration-ms="96" started-at="2016-06-29T08:03:03Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T08:03:03Z">
           <params>
             <param index="0">
               <value>
@@ -221,7 +268,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProductAndFilterByDiscountTest -->
-        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByDiscountTest" duration-ms="96" started-at="2016-06-29T07:01:57Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:01:57Z">
+        <test-method status="SKIP" signature="searchProductAndFilterByDiscountTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@14c8e61]" name="searchProductAndFilterByDiscountTest" duration-ms="103" started-at="2016-06-29T08:03:03Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T08:03:03Z">
           <params>
             <param index="0">
               <value>
@@ -256,7 +303,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProductAndFilterByDiscountTest -->
-        <test-method status="PASS" signature="searchProductAndFilterByPriceTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByPriceTest" duration-ms="24556" started-at="2016-06-29T07:01:57Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:02:21Z">
+        <test-method status="PASS" signature="searchProductAndFilterByPriceTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@14c8e61]" name="searchProductAndFilterByPriceTest" duration-ms="31617" started-at="2016-06-29T08:03:03Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T08:03:35Z">
           <params>
             <param index="0">
               <value>
@@ -267,7 +314,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProductAndFilterByPriceTest -->
-        <test-method status="PASS" signature="searchProductAndFilterByPriceTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByPriceTest" duration-ms="13675" started-at="2016-06-29T07:02:21Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:02:35Z">
+        <test-method status="PASS" signature="searchProductAndFilterByPriceTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@14c8e61]" name="searchProductAndFilterByPriceTest" duration-ms="14624" started-at="2016-06-29T08:03:35Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T08:03:49Z">
           <params>
             <param index="0">
               <value>
@@ -278,7 +325,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProductAndFilterByPriceTest -->
-        <test-method status="PASS" signature="searchProductAndFilterByPriceTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@50337526]" name="searchProductAndFilterByPriceTest" duration-ms="13139" started-at="2016-06-29T07:02:35Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T07:02:48Z">
+        <test-method status="PASS" signature="searchProductAndFilterByPriceTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.products.SearchAndFilterProductsTest@14c8e61]" name="searchProductAndFilterByPriceTest" duration-ms="15302" started-at="2016-06-29T08:03:49Z" data-provider="getDataForProductsSuite" finished-at="2016-06-29T08:04:05Z">
           <params>
             <param index="0">
               <value>
@@ -290,59 +337,12 @@
           </reporter-output>
         </test-method> <!-- searchProductAndFilterByPriceTest -->
       </class> <!-- com.bigbasket.products.SearchAndFilterProductsTest -->
-      <class name="com.bigbasket.customer.ForgotPasswordTest">
-        <test-method status="PASS" signature="clearLogsAndReports()[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@7c03092a]" name="clearLogsAndReports" is-config="true" duration-ms="171" started-at="2016-06-29T07:01:54Z" finished-at="2016-06-29T07:01:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clearLogsAndReports -->
-        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@7c03092a]" name="loadProperties" is-config="true" duration-ms="14" started-at="2016-06-29T07:01:54Z" finished-at="2016-06-29T07:01:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loadProperties -->
-        <test-method status="PASS" signature="forgotPasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@7c03092a]" name="forgotPasswordTest" duration-ms="27165" started-at="2016-06-29T07:01:56Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:02:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Case=CASE_OK, Email Address=srinimarva@gmail.com, Alert Message=, Runmode=Y, Iteration=1, Browser=Chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgotPasswordTest -->
-        <test-method status="PASS" signature="forgotPasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@7c03092a]" name="forgotPasswordTest" duration-ms="7536" started-at="2016-06-29T07:02:23Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:02:30Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Case=CASE_MISSING_EMAIL, Email Address=, Alert Message=Please Enter Email, Runmode=Y, Iteration=2, Browser=Chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgotPasswordTest -->
-        <test-method status="PASS" signature="forgotPasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@7c03092a]" name="forgotPasswordTest" duration-ms="9115" started-at="2016-06-29T07:02:30Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:02:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Case=CASE_INVALID_EMAIL, Email Address=lokesh.kittu@gmail.com, Alert Message=Invalid Email, Runmode=Y, Iteration=3, Browser=Chrome}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgotPasswordTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.bigbasket.customer.ForgotPasswordTest@7c03092a]" name="afterSuite" is-config="true" duration-ms="664" started-at="2016-06-29T07:10:29Z" finished-at="2016-06-29T07:10:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.bigbasket.customer.ForgotPasswordTest -->
       <class name="com.bigbakset.customer.myaccount.EmailAddressesTest">
-        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="loadProperties" is-config="true" duration-ms="12" started-at="2016-06-29T07:04:30Z" finished-at="2016-06-29T07:04:30Z">
+        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@62503aec]" name="loadProperties" is-config="true" duration-ms="29" started-at="2016-06-29T08:05:31Z" finished-at="2016-06-29T08:05:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadProperties -->
-        <test-method status="PASS" signature="addEmailAddressTest(java.util.Hashtable)[pri:1, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="addEmailAddressTest" duration-ms="223182" started-at="2016-06-29T07:04:30Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:08:14Z">
+        <test-method status="PASS" signature="addEmailAddressTest(java.util.Hashtable)[pri:1, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@62503aec]" name="addEmailAddressTest" duration-ms="244307" started-at="2016-06-29T08:05:31Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T08:09:35Z">
           <params>
             <param index="0">
               <value>
@@ -353,7 +353,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEmailAddressTest -->
-        <test-method status="PASS" signature="addEmailAddressTest(java.util.Hashtable)[pri:1, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="addEmailAddressTest" duration-ms="27912" started-at="2016-06-29T07:08:14Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:08:41Z">
+        <test-method status="PASS" signature="addEmailAddressTest(java.util.Hashtable)[pri:1, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@62503aec]" name="addEmailAddressTest" duration-ms="28964" started-at="2016-06-29T08:09:35Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T08:10:04Z">
           <params>
             <param index="0">
               <value>
@@ -364,7 +364,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEmailAddressTest -->
-        <test-method status="PASS" signature="addEmailAddressTest(java.util.Hashtable)[pri:1, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="addEmailAddressTest" duration-ms="19692" started-at="2016-06-29T07:08:41Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:09:01Z">
+        <test-method status="PASS" signature="addEmailAddressTest(java.util.Hashtable)[pri:1, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@62503aec]" name="addEmailAddressTest" duration-ms="30305" started-at="2016-06-29T08:10:04Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T08:10:34Z">
           <params>
             <param index="0">
               <value>
@@ -375,7 +375,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEmailAddressTest -->
-        <test-method status="FAIL" signature="addEmailAddressTest(java.util.Hashtable)[pri:1, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="addEmailAddressTest" duration-ms="20594" started-at="2016-06-29T07:09:01Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:09:22Z">
+        <test-method status="FAIL" signature="addEmailAddressTest(java.util.Hashtable)[pri:1, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@62503aec]" name="addEmailAddressTest" duration-ms="21610" started-at="2016-06-29T08:10:34Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T08:10:56Z">
           <params>
             <param index="0">
               <value>
@@ -411,7 +411,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addEmailAddressTest -->
-        <test-method status="PASS" signature="removeEmailAddressTest(java.util.Hashtable)[pri:2, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="removeEmailAddressTest" duration-ms="39038" started-at="2016-06-29T07:09:22Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:10:01Z">
+        <test-method status="PASS" signature="removeEmailAddressTest(java.util.Hashtable)[pri:2, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@62503aec]" name="removeEmailAddressTest" duration-ms="35110" started-at="2016-06-29T08:10:56Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T08:11:31Z">
           <params>
             <param index="0">
               <value>
@@ -422,7 +422,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeEmailAddressTest -->
-        <test-method status="PASS" signature="removeEmailAddressTest(java.util.Hashtable)[pri:2, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@3480411f]" name="removeEmailAddressTest" duration-ms="27328" started-at="2016-06-29T07:10:01Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:10:28Z">
+        <test-method status="PASS" signature="removeEmailAddressTest(java.util.Hashtable)[pri:2, instance:com.bigbakset.customer.myaccount.EmailAddressesTest@62503aec]" name="removeEmailAddressTest" duration-ms="18630" started-at="2016-06-29T08:11:31Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T08:11:50Z">
           <params>
             <param index="0">
               <value>
@@ -435,11 +435,11 @@
         </test-method> <!-- removeEmailAddressTest -->
       </class> <!-- com.bigbakset.customer.myaccount.EmailAddressesTest -->
       <class name="com.bigbasket.customer.SignInTest">
-        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="loadProperties" is-config="true" duration-ms="18" started-at="2016-06-29T07:02:40Z" finished-at="2016-06-29T07:02:40Z">
+        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbasket.customer.SignInTest@53753747]" name="loadProperties" is-config="true" duration-ms="32" started-at="2016-06-29T08:03:59Z" finished-at="2016-06-29T08:03:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadProperties -->
-        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="32068" started-at="2016-06-29T07:02:40Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:12Z">
+        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@53753747]" name="signInTest" duration-ms="40629" started-at="2016-06-29T08:04:00Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:04:40Z">
           <params>
             <param index="0">
               <value>
@@ -450,7 +450,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signInTest -->
-        <test-method status="FAIL" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="12000" started-at="2016-06-29T07:03:12Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:24Z">
+        <test-method status="FAIL" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@53753747]" name="signInTest" duration-ms="13711" started-at="2016-06-29T08:04:40Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:04:54Z">
           <params>
             <param index="0">
               <value>
@@ -486,7 +486,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signInTest -->
-        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="14206" started-at="2016-06-29T07:03:24Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:38Z">
+        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@53753747]" name="signInTest" duration-ms="10422" started-at="2016-06-29T08:04:54Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:05:04Z">
           <params>
             <param index="0">
               <value>
@@ -497,7 +497,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signInTest -->
-        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="14085" started-at="2016-06-29T07:03:38Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:52Z">
+        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@53753747]" name="signInTest" duration-ms="12994" started-at="2016-06-29T08:05:04Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:05:17Z">
           <params>
             <param index="0">
               <value>
@@ -508,7 +508,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signInTest -->
-        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="8940" started-at="2016-06-29T07:03:52Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:04:01Z">
+        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@53753747]" name="signInTest" duration-ms="8666" started-at="2016-06-29T08:05:17Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:05:26Z">
           <params>
             <param index="0">
               <value>
@@ -519,7 +519,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signInTest -->
-        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="20915" started-at="2016-06-29T07:04:01Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:04:22Z">
+        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@53753747]" name="signInTest" duration-ms="18479" started-at="2016-06-29T08:05:26Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:05:45Z">
           <params>
             <param index="0">
               <value>
@@ -530,7 +530,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signInTest -->
-        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@2b4ee401]" name="signInTest" duration-ms="30813" started-at="2016-06-29T07:04:22Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:04:53Z">
+        <test-method status="PASS" signature="signInTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignInTest@53753747]" name="signInTest" duration-ms="25961" started-at="2016-06-29T08:05:45Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:06:11Z">
           <params>
             <param index="0">
               <value>
@@ -543,11 +543,11 @@
         </test-method> <!-- signInTest -->
       </class> <!-- com.bigbasket.customer.SignInTest -->
       <class name="com.bigbasket.customer.SignUpTest">
-        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbasket.customer.SignUpTest@485b13dd]" name="loadProperties" is-config="true" duration-ms="20" started-at="2016-06-29T07:02:48Z" finished-at="2016-06-29T07:02:48Z">
+        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbasket.customer.SignUpTest@3480411f]" name="loadProperties" is-config="true" duration-ms="37" started-at="2016-06-29T08:04:05Z" finished-at="2016-06-29T08:04:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadProperties -->
-        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@485b13dd]" name="signUpTest" duration-ms="18141" started-at="2016-06-29T07:02:48Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:07Z">
+        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@3480411f]" name="signUpTest" duration-ms="32667" started-at="2016-06-29T08:04:05Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:04:37Z">
           <params>
             <param index="0">
               <value>
@@ -558,7 +558,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpTest -->
-        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@485b13dd]" name="signUpTest" duration-ms="12865" started-at="2016-06-29T07:03:07Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:19Z">
+        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@3480411f]" name="signUpTest" duration-ms="14174" started-at="2016-06-29T08:04:37Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:04:52Z">
           <params>
             <param index="0">
               <value>
@@ -569,7 +569,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpTest -->
-        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@485b13dd]" name="signUpTest" duration-ms="32323" started-at="2016-06-29T07:03:19Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:03:52Z">
+        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@3480411f]" name="signUpTest" duration-ms="11756" started-at="2016-06-29T08:04:52Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:05:03Z">
           <params>
             <param index="0">
               <value>
@@ -580,7 +580,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpTest -->
-        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@485b13dd]" name="signUpTest" duration-ms="13067" started-at="2016-06-29T07:03:52Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:04:05Z">
+        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@3480411f]" name="signUpTest" duration-ms="13738" started-at="2016-06-29T08:05:03Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:05:17Z">
           <params>
             <param index="0">
               <value>
@@ -591,7 +591,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpTest -->
-        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@485b13dd]" name="signUpTest" duration-ms="25454" started-at="2016-06-29T07:04:05Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T07:04:30Z">
+        <test-method status="PASS" signature="signUpTest(java.util.Hashtable)[pri:0, instance:com.bigbasket.customer.SignUpTest@3480411f]" name="signUpTest" duration-ms="13364" started-at="2016-06-29T08:05:17Z" data-provider="getDataForCustomerSuite" finished-at="2016-06-29T08:05:31Z">
           <params>
             <param index="0">
               <value>
@@ -604,11 +604,11 @@
         </test-method> <!-- signUpTest -->
       </class> <!-- com.bigbasket.customer.SignUpTest -->
       <class name="com.bigbakset.customer.myaccount.ChangePasswordTest">
-        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@53753747]" name="loadProperties" is-config="true" duration-ms="14" started-at="2016-06-29T07:01:54Z" finished-at="2016-06-29T07:01:54Z">
+        <test-method status="PASS" signature="loadProperties()[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@50337526]" name="loadProperties" is-config="true" duration-ms="20" started-at="2016-06-29T08:03:00Z" finished-at="2016-06-29T08:03:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadProperties -->
-        <test-method status="PASS" signature="changePasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@53753747]" name="changePasswordTest" duration-ms="70153" started-at="2016-06-29T07:01:56Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:03:06Z">
+        <test-method status="PASS" signature="changePasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@50337526]" name="changePasswordTest" duration-ms="97107" started-at="2016-06-29T08:03:02Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T08:04:39Z">
           <params>
             <param index="0">
               <value>
@@ -619,7 +619,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- changePasswordTest -->
-        <test-method status="PASS" signature="changePasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@53753747]" name="changePasswordTest" duration-ms="44687" started-at="2016-06-29T07:03:06Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:03:51Z">
+        <test-method status="PASS" signature="changePasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@50337526]" name="changePasswordTest" duration-ms="28401" started-at="2016-06-29T08:04:39Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T08:05:07Z">
           <params>
             <param index="0">
               <value>
@@ -630,7 +630,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- changePasswordTest -->
-        <test-method status="PASS" signature="changePasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@53753747]" name="changePasswordTest" duration-ms="46105" started-at="2016-06-29T07:03:51Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:04:37Z">
+        <test-method status="PASS" signature="changePasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@50337526]" name="changePasswordTest" duration-ms="26983" started-at="2016-06-29T08:05:07Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T08:05:34Z">
           <params>
             <param index="0">
               <value>
@@ -641,7 +641,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- changePasswordTest -->
-        <test-method status="PASS" signature="changePasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@53753747]" name="changePasswordTest" duration-ms="83181" started-at="2016-06-29T07:04:37Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T07:06:00Z">
+        <test-method status="PASS" signature="changePasswordTest(java.util.Hashtable)[pri:0, instance:com.bigbakset.customer.myaccount.ChangePasswordTest@50337526]" name="changePasswordTest" duration-ms="49929" started-at="2016-06-29T08:05:34Z" data-provider="getDataForMyAccountSuite" finished-at="2016-06-29T08:06:24Z">
           <params>
             <param index="0">
               <value>

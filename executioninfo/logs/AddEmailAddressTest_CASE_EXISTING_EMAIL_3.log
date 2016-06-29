@@ -1,0 +1,25 @@
+2016-06-29 07:08:42,017 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Starting AddEmailAddressTest_CASE_EXISTING_EMAIL_3
+2016-06-29 07:08:42,017 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Executing AddEmailAddressTest_CASE_EXISTING_EMAIL_3 using {Case=CASE_EXISTING_EMAIL, Email Address=srinimarva@gmail.com, Alert Message=This email address is already in use by you., Runmode=Y, Iteration=3, Browser=Mozilla}
+2016-06-29 07:08:42,017 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Starting function openBrowser - Mozilla
+2016-06-29 07:08:42,017 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] {Mozilla=RemoteWebDriver: firefox on MAC (f0f9321a-48df-4101-9c86-76bcfedea988), Chrome=null, IE=null}
+2016-06-29 07:08:42,017 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Using existing browser - Mozilla
+2016-06-29 07:08:42,049 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Starting connectURL function trying to connect http://www.bigbasket.com
+2016-06-29 07:08:44,202 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Ending connectURL function PASS
+2016-06-29 07:08:44,203 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Starting function clickSkipAndExplore in HomePage.class
+2016-06-29 07:08:47,042 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-29 07:08:47,042 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Starting function clickLOGINLink in HomePage.class
+2016-06-29 07:08:49,143 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Ending function clickLOGINLink in HomePage.class with PASS
+2016-06-29 07:08:49,144 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Starting doLogin function in SignInPage.class
+2016-06-29 07:08:56,727 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Ending doLogin function in SignInPage.class with PASS
+2016-06-29 07:08:56,727 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Starting function selectMyAccount in MyAccountPage.class
+2016-06-29 07:08:57,010 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Ending function selectMyAccount in MyAccountPage.class
+2016-06-29 07:08:57,011 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Starting function clickEmailAddressesLink in ChangePasswordPage.class
+2016-06-29 07:08:58,588 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Ending function clickEmailAddressesLink in ChangePasswordPage.class
+2016-06-29 07:09:00,001 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Ending function verifyEmailAddressesPage in EmailAddressesPage.class PASS
+2016-06-29 07:09:00,001 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Starting function addEmailAddress in EmailAddressesPage.class
+2016-06-29 07:09:00,334 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Ending function addEmailAddress in EmailAddressesPage.class
+2016-06-29 07:09:00,334 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Starting function clickSave in EmailAddressesPage.class
+2016-06-29 07:09:01,538 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Ending function clickSave in EmailAddressesPage.class
+2016-06-29 07:09:01,540 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Starting verifyAlertForEmail function in EmailAddressesPage.class
+2016-06-29 07:09:01,631 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Ending verifyAlertForEmail function in EmailAddressesPage.class with PASS
+2016-06-29 07:09:01,631 DEBUG [AddEmailAddressTest_CASE_EXISTING_EMAIL_3] Ending AddEmailAddressTest_CASE_EXISTING_EMAIL_3

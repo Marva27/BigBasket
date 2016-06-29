@@ -1,0 +1,12 @@
+<suite name="Customer" parallel="tests" thread-count="2">
+  <test name="Sign Up Test" >
+    <classes>
+      <class name="com.bigbasket.customer.SignUpTest" />
+    </classes>
+  </test>
+  <test name="Sign In Test" >
+    <classes>
+      <class name="com.bigbasket.customer.SignInTest" />
+    </classes>
+  </test>
+</suite>

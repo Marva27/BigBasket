@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Big Basket" parallel="classes" thread-count="3">
+  <test name="BigBasket"   >
+    <packages>
+      <package name="com.bigbasket.customer" />
+      <package name="com.bigbakset.customer.myaccount" />
+      <package name="com.bigbasket.products" />
+   </packages>
+ </test>
+</suite>

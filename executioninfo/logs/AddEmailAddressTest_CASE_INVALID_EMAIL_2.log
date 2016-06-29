@@ -1,0 +1,25 @@
+2016-06-29 07:08:14,188 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Starting AddEmailAddressTest_CASE_INVALID_EMAIL_2
+2016-06-29 07:08:14,189 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Executing AddEmailAddressTest_CASE_INVALID_EMAIL_2 using {Case=CASE_INVALID_EMAIL, Email Address=sri, Alert Message=Please enter a valid email address, Runmode=Y, Iteration=2, Browser=Mozilla}
+2016-06-29 07:08:14,189 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Starting function openBrowser - Mozilla
+2016-06-29 07:08:14,189 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] {Mozilla=RemoteWebDriver: firefox on MAC (f0f9321a-48df-4101-9c86-76bcfedea988), Chrome=null, IE=null}
+2016-06-29 07:08:14,189 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Using existing browser - Mozilla
+2016-06-29 07:08:14,218 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Starting connectURL function trying to connect http://www.bigbasket.com
+2016-06-29 07:08:16,102 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Ending connectURL function PASS
+2016-06-29 07:08:16,103 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Starting function clickSkipAndExplore in HomePage.class
+2016-06-29 07:08:18,839 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-29 07:08:18,839 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Starting function clickLOGINLink in HomePage.class
+2016-06-29 07:08:19,036 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Ending function clickLOGINLink in HomePage.class with PASS
+2016-06-29 07:08:19,038 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Starting doLogin function in SignInPage.class
+2016-06-29 07:08:36,425 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Ending doLogin function in SignInPage.class with PASS
+2016-06-29 07:08:36,425 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Starting function selectMyAccount in MyAccountPage.class
+2016-06-29 07:08:36,662 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Ending function selectMyAccount in MyAccountPage.class
+2016-06-29 07:08:36,663 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Starting function clickEmailAddressesLink in ChangePasswordPage.class
+2016-06-29 07:08:40,052 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Ending function clickEmailAddressesLink in ChangePasswordPage.class
+2016-06-29 07:08:40,154 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Ending function verifyEmailAddressesPage in EmailAddressesPage.class PASS
+2016-06-29 07:08:40,154 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Starting function addEmailAddress in EmailAddressesPage.class
+2016-06-29 07:08:40,677 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Ending function addEmailAddress in EmailAddressesPage.class
+2016-06-29 07:08:40,677 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Starting function clickSave in EmailAddressesPage.class
+2016-06-29 07:08:41,867 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Ending function clickSave in EmailAddressesPage.class
+2016-06-29 07:08:41,869 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Starting verifyAlertForEmail function in EmailAddressesPage.class
+2016-06-29 07:08:41,937 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Ending verifyAlertForEmail function in EmailAddressesPage.class with PASS
+2016-06-29 07:08:41,937 DEBUG [AddEmailAddressTest_CASE_INVALID_EMAIL_2] Ending AddEmailAddressTest_CASE_INVALID_EMAIL_2

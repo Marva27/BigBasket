@@ -1,0 +1,16 @@
+2016-06-29 07:03:20,116 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Starting SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3
+2016-06-29 07:03:20,116 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Executing SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3 using {Email Address=, Case=CASE_MISSING_EMAIL_ADDRESS, First Name=Lokesh, Runmode=Y, Iteration=3, Password=Orange@27, Browser=Mozilla, Alert Message=Enter a valid e-mail address., Last Name=Balaraman}
+2016-06-29 07:03:20,118 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Starting function openBrowser - Mozilla
+2016-06-29 07:03:20,118 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] {Mozilla=RemoteWebDriver: firefox on MAC (866d3260-8080-4e93-b092-e671fb96aa44), Chrome=null, IE=null}
+2016-06-29 07:03:20,118 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Using existing browser - Mozilla
+2016-06-29 07:03:20,168 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Starting connectURL function trying to connect http://www.bigbasket.com
+2016-06-29 07:03:41,006 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Ending connectURL function PASS
+2016-06-29 07:03:41,080 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Starting function clickSkipAndExplore in HomePage.class
+2016-06-29 07:03:42,025 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-29 07:03:42,025 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Starting function clickSIGNUPLink in HomePage.class
+2016-06-29 07:03:46,126 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Ending function clickSIGNUPLink in HomePage.class with PASS
+2016-06-29 07:03:46,128 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Starting function enterSignUpDetails in SignUpPage.class
+2016-06-29 07:03:51,610 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Ending function enterSignUpDetails in SignUpPage.class with PASS
+2016-06-29 07:03:51,614 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Starting function verifySignUpFailure in SignUpPage.class
+2016-06-29 07:03:52,207 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Ending function verifySignUpFailure in SignUpPage.class with PASS
+2016-06-29 07:03:52,207 DEBUG [SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3] Ending SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3

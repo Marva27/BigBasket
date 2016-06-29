@@ -1,0 +1,16 @@
+2016-06-29 07:02:49,042 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Starting SignUpTest_CASE_MISSING_FIRST_NAME_1
+2016-06-29 07:02:49,042 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Executing SignUpTest_CASE_MISSING_FIRST_NAME_1 using {Email Address=lokesh.kittu@gmail.com, Case=CASE_MISSING_FIRST_NAME, First Name=, Runmode=Y, Iteration=1, Password=Orange@27, Browser=Mozilla, Alert Message=Enter a first name., Last Name=Balaraman}
+2016-06-29 07:02:49,043 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Starting function openBrowser - Mozilla
+2016-06-29 07:02:49,043 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] {Mozilla=null, Chrome=null, IE=null}
+2016-06-29 07:02:49,043 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Opening fresh browser - Mozilla
+2016-06-29 07:02:55,230 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Starting connectURL function trying to connect http://www.bigbasket.com
+2016-06-29 07:02:58,317 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Ending connectURL function PASS
+2016-06-29 07:02:58,317 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Starting function clickSkipAndExplore in HomePage.class
+2016-06-29 07:03:01,839 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-29 07:03:01,866 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Starting function clickSIGNUPLink in HomePage.class
+2016-06-29 07:03:02,285 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Ending function clickSIGNUPLink in HomePage.class with PASS
+2016-06-29 07:03:02,340 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Starting function enterSignUpDetails in SignUpPage.class
+2016-06-29 07:03:06,925 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Ending function enterSignUpDetails in SignUpPage.class with PASS
+2016-06-29 07:03:06,927 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Starting function verifySignUpFailure in SignUpPage.class
+2016-06-29 07:03:07,012 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Ending function verifySignUpFailure in SignUpPage.class with PASS
+2016-06-29 07:03:07,012 DEBUG [SignUpTest_CASE_MISSING_FIRST_NAME_1] Ending SignUpTest_CASE_MISSING_FIRST_NAME_1

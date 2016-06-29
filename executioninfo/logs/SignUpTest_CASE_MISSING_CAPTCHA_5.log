@@ -1,0 +1,16 @@
+2016-06-29 07:04:05,367 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Starting SignUpTest_CASE_MISSING_CAPTCHA_5
+2016-06-29 07:04:05,367 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Executing SignUpTest_CASE_MISSING_CAPTCHA_5 using {Email Address=lokesh.kittu@gmail.com, Case=CASE_MISSING_CAPTCHA, First Name=Lokesh, Runmode=y, Iteration=5, Password=Orange@27, Browser=Mozilla, Alert Message=Enter the string in image, Last Name=Balaraman}
+2016-06-29 07:04:05,367 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Starting function openBrowser - Mozilla
+2016-06-29 07:04:05,368 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] {Mozilla=RemoteWebDriver: firefox on MAC (866d3260-8080-4e93-b092-e671fb96aa44), Chrome=null, IE=null}
+2016-06-29 07:04:05,368 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Using existing browser - Mozilla
+2016-06-29 07:04:05,406 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Starting connectURL function trying to connect http://www.bigbasket.com
+2016-06-29 07:04:07,706 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Ending connectURL function PASS
+2016-06-29 07:04:07,707 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Starting function clickSkipAndExplore in HomePage.class
+2016-06-29 07:04:11,157 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-29 07:04:11,157 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Starting function clickSIGNUPLink in HomePage.class
+2016-06-29 07:04:11,726 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Ending function clickSIGNUPLink in HomePage.class with PASS
+2016-06-29 07:04:11,728 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Starting function enterSignUpDetails in SignUpPage.class
+2016-06-29 07:04:30,522 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Ending function enterSignUpDetails in SignUpPage.class with PASS
+2016-06-29 07:04:30,538 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Starting function verifySignUpFailure in SignUpPage.class
+2016-06-29 07:04:30,733 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Ending function verifySignUpFailure in SignUpPage.class with PASS
+2016-06-29 07:04:30,733 DEBUG [SignUpTest_CASE_MISSING_CAPTCHA_5] Ending SignUpTest_CASE_MISSING_CAPTCHA_5

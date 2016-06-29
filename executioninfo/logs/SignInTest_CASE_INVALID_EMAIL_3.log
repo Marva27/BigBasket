@@ -1,0 +1,16 @@
+2016-06-29 07:03:25,909 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Starting SignInTest_CASE_INVALID_EMAIL_3
+2016-06-29 07:03:26,041 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Executing SignInTest_CASE_INVALID_EMAIL_3 using {Case=CASE_INVALID_EMAIL, Email Address=, Alert Message=Enter a valid e-mail address., Password=Orange@27, Runmode=Y, Iteration=3, Customer Name=Srinivasan, Browser=Chrome}
+2016-06-29 07:03:26,042 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Starting function openBrowser - Chrome
+2016-06-29 07:03:26,042 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] {Mozilla=null, Chrome=RemoteWebDriver: chrome on MAC (6b0eb1e6-9779-40c0-8d06-583ece44b97f), IE=null}
+2016-06-29 07:03:26,042 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Using existing browser - Chrome
+2016-06-29 07:03:26,176 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Starting connectURL function trying to connect http://www.bigbasket.com
+2016-06-29 07:03:32,805 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Ending connectURL function PASS
+2016-06-29 07:03:32,806 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Starting function clickSkipAndExplore in HomePage.class
+2016-06-29 07:03:35,428 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-29 07:03:35,428 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Starting function clickLOGINLink in HomePage.class
+2016-06-29 07:03:37,641 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Ending function clickLOGINLink in HomePage.class with PASS
+2016-06-29 07:03:37,643 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Starting doLogin function in SignInPage.class
+2016-06-29 07:03:38,348 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Ending doLogin function in SignInPage.class
+2016-06-29 07:03:38,368 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Starting function verifyAlertForInvalidEmail in SignInPage.class
+2016-06-29 07:03:38,507 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Ending function verifyAlertForInvalidEmail in SignInPage.class  restricted with expected alert message Enter a valid e-mail address. - PASS
+2016-06-29 07:03:38,508 DEBUG [SignInTest_CASE_INVALID_EMAIL_3] Ending SignInTest_CASE_INVALID_EMAIL_3

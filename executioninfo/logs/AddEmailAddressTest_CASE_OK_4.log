@@ -1,0 +1,30 @@
+2016-06-29 07:09:01,748 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting AddEmailAddressTest_CASE_OK_4
+2016-06-29 07:09:01,748 DEBUG [AddEmailAddressTest_CASE_OK_4] Executing AddEmailAddressTest_CASE_OK_4 using {Case=CASE_OK, Email Address=aroon.irs@gmail.com, Alert Message=, Runmode=Y, Iteration=4, Browser=Mozilla}
+2016-06-29 07:09:01,748 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting function openBrowser - Mozilla
+2016-06-29 07:09:01,748 DEBUG [AddEmailAddressTest_CASE_OK_4] {Mozilla=RemoteWebDriver: firefox on MAC (f0f9321a-48df-4101-9c86-76bcfedea988), Chrome=null, IE=null}
+2016-06-29 07:09:01,748 DEBUG [AddEmailAddressTest_CASE_OK_4] Using existing browser - Mozilla
+2016-06-29 07:09:01,798 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting connectURL function trying to connect http://www.bigbasket.com
+2016-06-29 07:09:03,935 DEBUG [AddEmailAddressTest_CASE_OK_4] Ending connectURL function PASS
+2016-06-29 07:09:03,936 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting function clickSkipAndExplore in HomePage.class
+2016-06-29 07:09:06,903 DEBUG [AddEmailAddressTest_CASE_OK_4] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-29 07:09:06,903 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting function clickLOGINLink in HomePage.class
+2016-06-29 07:09:07,236 DEBUG [AddEmailAddressTest_CASE_OK_4] Ending function clickLOGINLink in HomePage.class with PASS
+2016-06-29 07:09:07,237 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting doLogin function in SignInPage.class
+2016-06-29 07:09:16,240 DEBUG [AddEmailAddressTest_CASE_OK_4] Ending doLogin function in SignInPage.class with PASS
+2016-06-29 07:09:16,241 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting function selectMyAccount in MyAccountPage.class
+2016-06-29 07:09:16,476 DEBUG [AddEmailAddressTest_CASE_OK_4] Ending function selectMyAccount in MyAccountPage.class
+2016-06-29 07:09:16,477 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting function clickEmailAddressesLink in ChangePasswordPage.class
+2016-06-29 07:09:18,333 DEBUG [AddEmailAddressTest_CASE_OK_4] Ending function clickEmailAddressesLink in ChangePasswordPage.class
+2016-06-29 07:09:19,916 DEBUG [AddEmailAddressTest_CASE_OK_4] Ending function verifyEmailAddressesPage in EmailAddressesPage.class PASS
+2016-06-29 07:09:19,916 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting function addEmailAddress in EmailAddressesPage.class
+2016-06-29 07:09:20,203 DEBUG [AddEmailAddressTest_CASE_OK_4] Ending function addEmailAddress in EmailAddressesPage.class
+2016-06-29 07:09:20,203 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting function clickSave in EmailAddressesPage.class
+2016-06-29 07:09:21,392 DEBUG [AddEmailAddressTest_CASE_OK_4] Ending function clickSave in EmailAddressesPage.class
+2016-06-29 07:09:21,395 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting function verifyAlertForEmailSuccess in EmailAddressesPage.class
+2016-06-29 07:09:21,498 DEBUG [AddEmailAddressTest_CASE_OK_4] Ending function verifyAlertForEmailSuccess in EmailAddressesPage.class with PASS
+2016-06-29 07:09:21,498 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting function clickOK in EmailAddressesPage.class
+2016-06-29 07:09:21,616 DEBUG [AddEmailAddressTest_CASE_OK_4] Ending function clickOK in EmailAddressesPage.class
+2016-06-29 07:09:21,619 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting function verifyNewEmailAddress in EmailAddressesPage.class
+2016-06-29 07:09:21,619 DEBUG [AddEmailAddressTest_CASE_OK_4] Starting function locateEmailAddress in EmailAddressesPage.class
+2016-06-29 07:09:21,761 DEBUG [AddEmailAddressTest_CASE_OK_4] Ending function locateEmailAddress in EmailAddressesPage.class
+2016-06-29 07:09:21,761 DEBUG [AddEmailAddressTest_CASE_OK_4] Ending function verifyNewEmailAddress in EmailAddressesPage.class with FAIL

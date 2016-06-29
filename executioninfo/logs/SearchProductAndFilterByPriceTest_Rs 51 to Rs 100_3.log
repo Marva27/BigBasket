@@ -1,0 +1,14 @@
+2016-06-29 07:02:35,766 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] Starting SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3
+2016-06-29 07:02:35,766 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] Executing SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3 using {Product Name=Orange, Case=Rs 51 to Rs 100, Price Range=Rs 51 to Rs 100, Runmode=Y, Iteration=3, Browser=Chrome}
+2016-06-29 07:02:35,766 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] Starting function openBrowser - Chrome
+2016-06-29 07:02:35,767 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] {Mozilla=null, Chrome=RemoteWebDriver: chrome on MAC (9269e795-7efe-4926-af6a-fa1fb615023d), IE=null}
+2016-06-29 07:02:35,768 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] Using existing browser - Chrome
+2016-06-29 07:02:37,963 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] Starting function clickSkipAndExplore in HomePage.class
+2016-06-29 07:02:38,174 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-29 07:02:38,181 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] Starting function searchProduct in SearchResultsPage.class
+2016-06-29 07:02:44,051 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] Ending function searchProduct in SearchResultsPage.class
+2016-06-29 07:02:44,056 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] Starting function filterByPriceRange in SearchResultsPage.class
+2016-06-29 07:02:46,121 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] Ending function filterByPriceRange in SearchResultsPage.class
+2016-06-29 07:02:47,124 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] Starting function verifySearchResultsByPriceRange in SearchResultsPage.class
+2016-06-29 07:02:48,743 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] Ending function verifySearchResultsByPriceRange in SearchResultsPage.class with PASS
+2016-06-29 07:02:48,744 DEBUG [SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3] Ending SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3

@@ -1,0 +1,6 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Big Basket">
+  <suite-files>
+   <suite-file path="./Customer.xml" />
+  </suite-files>
+</suite>

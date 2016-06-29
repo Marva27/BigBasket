@@ -1,0 +1,8 @@
+
+<suite name="BigBasket" parallel="classes" thread-count="2">
+  <test name="Customer" >
+    <packages>
+      <package name="com.bigbasket.customer" />
+    </packages>>
+  </test>
+</suite>

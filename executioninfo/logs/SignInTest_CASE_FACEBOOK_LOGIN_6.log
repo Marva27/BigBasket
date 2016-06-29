@@ -1,0 +1,22 @@
+2016-06-29 07:04:01,657 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Starting SignInTest_CASE_FACEBOOK_LOGIN_6
+2016-06-29 07:04:01,657 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Executing SignInTest_CASE_FACEBOOK_LOGIN_6 using {Case=CASE_FACEBOOK_LOGIN, Email Address=mailtorsrinivasan@gmail.com, Alert Message=, Password=Orange@7, Runmode=Y, Iteration=6, Customer Name=Srinivasan, Browser=Chrome}
+2016-06-29 07:04:01,657 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Starting function openBrowser - Chrome
+2016-06-29 07:04:01,657 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] {Mozilla=null, Chrome=RemoteWebDriver: chrome on MAC (6b0eb1e6-9779-40c0-8d06-583ece44b97f), IE=null}
+2016-06-29 07:04:01,658 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Using existing browser - Chrome
+2016-06-29 07:04:01,809 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Starting connectURL function trying to connect http://www.bigbasket.com
+2016-06-29 07:04:04,230 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Ending connectURL function PASS
+2016-06-29 07:04:04,231 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Starting function clickSkipAndExplore in HomePage.class
+2016-06-29 07:04:07,415 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-29 07:04:07,415 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Starting function clickLOGINLink in HomePage.class
+2016-06-29 07:04:09,472 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Ending function clickLOGINLink in HomePage.class with PASS
+2016-06-29 07:04:09,474 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Starting function clickLoginWithFacebook in SignInPage.class
+2016-06-29 07:04:11,319 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Ending function clickLoginWithFacebook in SignInPage.class
+2016-06-29 07:04:11,345 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Starting function enterEmailAddress in FacebookLoginPage.class
+2016-06-29 07:04:11,626 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Ending function enterEmailAddress in FacebookLoginPage.class
+2016-06-29 07:04:11,626 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Starting function enterPassword in FacebookLoginPage.class
+2016-06-29 07:04:11,934 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Ending function enterPassword in FacebookLoginPage.class
+2016-06-29 07:04:11,934 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Starting function clickLogin in FacebookLoginPage.class
+2016-06-29 07:04:22,260 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Ending function clickLogin in FacebookLoginPage.class
+2016-06-29 07:04:22,377 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Starting function verifyIfLoginSuccess in HomePage.class
+2016-06-29 07:04:22,459 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Ending function verifyIfLoginSuccess in HomePage.class PASS
+2016-06-29 07:04:22,460 DEBUG [SignInTest_CASE_FACEBOOK_LOGIN_6] Ending SignInTest_CASE_FACEBOOK_LOGIN_6

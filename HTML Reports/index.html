@@ -1,0 +1,2551 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+ExtentReports Library 2.40.2 | http://relevantcodes.com/extentreports-for-selenium/ | https://github.com/anshooarora/
+Copyright (c) 2015, Anshoo Arora (Relevant Codes) | Copyrights licensed under the New BSD License | http://opensource.org/licenses/BSD-3-Clause
+Documentation: http://extentreports.relevantcodes.com 
+-->
+
+<meta charset='UTF-8' /> 
+<meta name='description' content='ExtentReports (by Anshoo Arora) is a reporting library for automation testing for .NET and Java. It creates detailed and beautiful HTML reports for modern browsers. ExtentReports shows test and step summary along with dashboards, system and environment details for quick analysis of your tests.' />
+<meta name='robots' content='noodp, noydir' />
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+
+<title>
+ExtentReports 2.0
+</title>
+
+
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+<link href='https://cdn.rawgit.com/anshooarora/extentreports/e4f8ea1de961161791c01b99a71a1e17f81125cf/cdn/extent.css' type='text/css' rel='stylesheet' />
+
+<style>
+
+            
+                
+            
+        
+</style>
+</head>
+
+
+<body class='extent standard hide-overflow'>
+<!-- nav -->
+<nav>
+<div class='logo-container'>
+<a class='logo-content' href='http://extentreports.relevantcodes.com'>
+<span>ExtentReports</span>
+</a>
+<a href='#' data-activates='slide-out' class='button-collapse hide-on-large-only'><i class='mdi-navigation-apps'></i></a>
+</div>
+<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+<li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
+<li class='analysis waves-effect'><a href='#!' class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a></li>
+</ul>
+<span class='report-name'>Automation Report</span> <span class='report-headline'></span>
+<ul class='right hide-on-med-and-down nav-right'>
+<li class='theme-selector' alt='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");' title='Click to toggle dark theme. To enable by default, use js configuration $("body").addClass("dark");'>
+<i class='mdi-hardware-desktop-windows'></i>
+</li>
+<li>
+<span class='suite-started-time'>2016-06-29 07:10:29</span>
+</li>
+<li>
+<span>v2.40.2</span>
+</li>
+</ul>
+</nav>
+<!-- /nav -->
+
+<!-- container -->
+<div class='container'>
+
+<!-- dashboard -->
+<div id='dashboard-view' class='row'>
+<div class='time-totals'>
+<div class='col l2 m4 s6'>
+<div class='card suite-total-tests'> 
+<span class='panel-name'>Total Tests</span> 
+<span class='total-tests'> <span class='panel-lead'></span> </span> 
+</div> 
+</div>
+<div class='col l2 m4 s6'>
+<div class='card suite-total-steps'> 
+<span class='panel-name'>Total Steps</span> 
+<span class='total-steps'> <span class='panel-lead'></span> </span> 
+</div> 
+</div>
+<div class='col l2 m4 s12'>
+<div class='card suite-total-time-current'> 
+<span class='panel-name'>Total Time Taken (Current Run)</span> 
+<span class='suite-total-time-current-value panel-lead'>0h 8m 36s+145ms</span> 
+</div> 
+</div>
+<div class='col l2 m4 s12'>
+<div class='card suite-total-time-overall'> 
+<span class='panel-name'>Total Time Taken (Overall)</span> 
+<span class='suite-total-time-overall-value panel-lead'>0h 8m 36s+145ms</span> 
+</div> 
+</div>
+<div class='col l2 m4 s6 suite-start-time'>
+<div class='card accent green-accent'> 
+<span class='panel-name'>Start</span> 
+<span class='panel-lead suite-started-time'>2016-06-29 07:01:53</span> 
+</div> 
+</div>
+<div class='col l2 m4 s6 suite-end-time'>
+<div class='card accent pink-accent'> 
+<span class='panel-name'>End</span> 
+<span class='panel-lead suite-ended-time'>2016-06-29 07:10:29</span> 
+</div> 
+</div>
+</div>
+<div class='charts'>
+<div class='col s12 m6 l4 fh'> 
+<div class='card-panel'> 
+<div>
+<span class='panel-name'>Tests View</span>
+</div> 
+<div class='panel-setting modal-trigger test-count-setting right'>
+<a href='#test-count-setting'><i class='mdi-navigation-more-vert text-md'></i></a>
+</div> 
+<div class='chart-box'>
+<canvas class='text-centered' id='test-analysis'></canvas>
+</div> 
+<div>
+<span class='weight-light'><span class='t-pass-count weight-normal'></span> test(s) passed</span>
+</div> 
+<div>
+<span class='weight-light'><span class='t-fail-count weight-normal'></span> test(s) failed, <span class='t-others-count weight-normal'></span> others</span>
+</div> 
+</div> 
+</div> 
+<div class='col s12 m6 l4 fh'> 
+<div class='card-panel'> 
+<div>
+<span class='panel-name'>Steps View</span>
+</div> 
+<div class='panel-setting modal-trigger step-status-filter right'>
+<a href='#step-status-filter'><i class='mdi-navigation-more-vert text-md'></i></a>
+</div> 
+<div class='chart-box'>
+<canvas class='text-centered' id='step-analysis'></canvas>
+</div> 
+<div>
+<span class='weight-light'><span class='s-pass-count weight-normal'></span> step(s) passed </span>
+</div> 
+<div>
+<span class='weight-light'><span class='s-fail-count weight-normal'></span> step(s) failed, <span class='s-others-count weight-normal'></span> others</span>
+</div> 
+</div> 
+</div>
+<div class='col s12 m12 l4 fh'> 
+<div class='card-panel'> 
+<span class='panel-name'>Pass Percentage</span> 
+<span class='pass-percentage panel-lead'></span> 
+<div class='progress light-blue lighten-3'> 
+<div class='determinate light-blue'></div> 
+</div> 
+</div> 
+</div>
+</div>
+<div class='system-view'>
+<div class='col l4 m12 s12'>
+<div class='card-panel'>
+<span class='label info outline right'>Environment</span>
+<table>
+<thead>
+<tr>
+<th>Param</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Mac OS X</td>
+</tr>
+<tr>
+<td>Host Name</td>
+<td>Srinivasans-MacBook-Pro.local</td>
+</tr>
+<tr>
+<td>Java Version</td>
+<td>1.7.0_79</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>srinivasanramu</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<!-- /dashboard -->
+
+<!-- tests -->
+<div id='test-view' class='row _addedTable'>
+<div class='col _addedCell1'>
+<div class='contents'>
+<div class='card-panel heading'>
+<h5>Tests</h5>
+</div>
+<div class='card-panel filters'>
+<div>
+<a data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#' class='dropdown-button button tests-toggle'><i class='mdi-action-subject icon'></i></a>
+<ul id='tests-toggle' class='dropdown-content'>
+<li class='pass'><a href='#!'>Pass</a></li>
+<li class='fail'><a href='#!'>Fail</a></li>
+<li class='skip'><a href='#!'>Skip</a></li>
+<li class='divider'></li>
+<li class='clear'><a href='#!'>Clear Filters</a></li>
+</ul>
+</div>
+<div>
+<a id='clear-filters' alt='Clear Filters' title='Clear Filters'><i class='mdi-navigation-close icon'></i></a>
+</div>
+<div>&nbsp;&middot;&nbsp;</div>
+<div>
+<a id='enableDashboard' alt='Enable Dashboard' title='Enable Dashboard'><i class='mdi-action-track-changes icon'></i></a>
+</div>
+<div>
+<a id='refreshCharts' alt='Refresh Charts on Filters' title='Refresh Charts on Filters' class='enabled'><i class='mdi-navigation-refresh icon'></i></i></a>
+</div>
+<div>&nbsp;&middot;</div>
+<div class='search' alt='Search Tests' title='Search Tests'>
+<div class='input-field left'>
+<input id='searchTests' type='text' class='validate' placeholder='Search Tests...'>
+</div>
+<i class='mdi-action-search icon'></i>
+</div>
+</div>
+<div class='card-panel no-padding-h no-padding-v no-margin-v'>
+<div class='wrapper'>
+<ul id='test-collection' class='test-collection'>
+<li class='collection-item test displayed active skip ' extentid='16459c72-01c7-4285-a4e2-6f3c0d18edc7'>
+<div class='test-head'>
+<span class='test-name'>SearchProductAndFilterByBrandTest_CASE_OK_1 </span>
+<span class='test-status label right outline capitalize skip'>skip</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:01:56</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:01:56</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+61ms</span>
+</div>
+<div class='test-desc'></div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+<td class='timestamp'>07:01:56</td>
+<td class='step-details'>Skipping the test SearchProductAndFilterByBrandTest as the Runmode of Test Case is found to be NO.</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='c2801173-c515-4a54-a94b-03b0ca7fdc84'>
+<div class='test-head'>
+<span class='test-name'>ChangePasswordTest_CASE_FIELD_REQUIRED_1 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:01:56</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:03:06</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 9s+982ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully login into his/her account upon providing valid credentails and change password</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:01:56</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test ChangePasswordTest_CASE_FIELD_REQUIRED_1 using test data {Old Password=, Case=CASE_FIELD_REQUIRED, Alert Message=This field is required., Runmode=Y, Iteration=1, Confirm Password=, New Password=, Browser=Mozilla}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:17</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:31</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:59</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Login to Customer account</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:05</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Select MY ACCOUNT menu option and click the Change Password link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:06</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Password change is restricted as the Old Password not provided</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='329b6eda-1f7a-446c-8f3c-549d157b5306'>
+<div class='test-head'>
+<span class='test-name'>ForgotPasswordTest_CASE_OK_1 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:01:56</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:02:23</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 26s+968ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully retrieve their forgotten password upon providing valid credentials</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:01:56</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test ForgotPasswordTest_CASE_OK_1 using test data {Case=CASE_OK, Email Address=srinimarva@gmail.com, Alert Message=, Runmode=Y, Iteration=1, Browser=Chrome}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:04</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:09</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:13</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:16</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the LOGIN link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:23</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the OTP Code is sent to registered email address and mobile number upon providing valid email address, clicking the Forgot Password link</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active skip ' extentid='6db78493-afd0-42d2-9357-eb267ab460b5'>
+<div class='test-head'>
+<span class='test-name'>SearchProductAndFilterByBrandTest_CASE_OK_2 </span>
+<span class='test-status label right outline capitalize skip'>skip</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:01:56</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:01:56</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+34ms</span>
+</div>
+<div class='test-desc'></div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+<td class='timestamp'>07:01:56</td>
+<td class='step-details'>Skipping the test SearchProductAndFilterByBrandTest as the Runmode of Test Case is found to be NO.</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active skip ' extentid='81dec517-ce35-4ee4-a4ba-f3d0255234a1'>
+<div class='test-head'>
+<span class='test-name'>SearchProductAndFilterByDiscountTest_UPTO 5%_1 </span>
+<span class='test-status label right outline capitalize skip'>skip</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:01:56</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:01:56</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+34ms</span>
+</div>
+<div class='test-desc'></div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+<td class='timestamp'>07:01:56</td>
+<td class='step-details'>Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active skip ' extentid='7e64466e-1965-4c26-b42b-f588624f461c'>
+<div class='test-head'>
+<span class='test-name'>SearchProductAndFilterByDiscountTest_5% - 10%_2 </span>
+<span class='test-status label right outline capitalize skip'>skip</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:01:56</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:01:56</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+35ms</span>
+</div>
+<div class='test-desc'></div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+<td class='timestamp'>07:01:56</td>
+<td class='step-details'>Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active skip ' extentid='2355cae0-73b8-43b4-a427-4c68143c409c'>
+<div class='test-head'>
+<span class='test-name'>SearchProductAndFilterByDiscountTest_10% - 15%_3 </span>
+<span class='test-status label right outline capitalize skip'>skip</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:01:57</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:01:57</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+41ms</span>
+</div>
+<div class='test-desc'></div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+<td class='timestamp'>07:01:57</td>
+<td class='step-details'>Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active skip ' extentid='d6a3a143-e65a-441e-91f1-165b926b8fe3'>
+<div class='test-head'>
+<span class='test-name'>SearchProductAndFilterByDiscountTest_15% - 25%_4 </span>
+<span class='test-status label right outline capitalize skip'>skip</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:01:57</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:01:57</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+25ms</span>
+</div>
+<div class='test-desc'></div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+<td class='timestamp'>07:01:57</td>
+<td class='step-details'>Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active skip ' extentid='176b3063-8041-4dad-be3b-d846e1e7fcb5'>
+<div class='test-head'>
+<span class='test-name'>SearchProductAndFilterByDiscountTest_MORE THAN 25%_5 </span>
+<span class='test-status label right outline capitalize skip'>skip</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:01:57</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:01:57</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 0s+27ms</span>
+</div>
+<div class='test-desc'></div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status skip' title='skip' alt='skip'><i class='mdi-content-redo'></i></td>
+<td class='timestamp'>07:01:57</td>
+<td class='step-details'>Skipping the test SearchProductAndFilterByDiscountTest as the Runmode of Test Case is found to be NO.</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='7dcfef8c-abe1-43df-9b5f-febeb3d91cd0'>
+<div class='test-head'>
+<span class='test-name'>SearchProductAndFilterByPriceTest_< Rs 20_1 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:01:57</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:02:21</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 24s+491ms</span>
+</div>
+<div class='test-desc'></div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:01:57</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SearchProductAndFilterByPriceTest_< Rs 20_1 using test data {Product Name=Orange, Case=< Rs 20, Price Range=Less than Rs 20, Runmode=Y, Iteration=1, Browser=Chrome}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:04</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:09</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:13</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:21</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Filter by Price Range and verify if the Search Results are within the Price Range selected</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='cb5d4b19-3065-4d8f-84ba-91e1dc975a9d'>
+<div class='test-head'>
+<span class='test-name'>SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:02:22</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:02:35</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 13s+447ms</span>
+</div>
+<div class='test-desc'></div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:02:22</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SearchProductAndFilterByPriceTest_Rs 21 to Rs 50_2 using test data {Product Name=Orange, Case=Rs 21 to Rs 50, Price Range=Rs 21 to Rs 50, Runmode=Y, Iteration=2, Browser=Chrome}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:22</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:24</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:27</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:35</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Filter by Price Range and verify if the Search Results are within the Price Range selected</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='ccb8b7f4-9671-47ec-bdab-2d9ebb0de638'>
+<div class='test-head'>
+<span class='test-name'>ForgotPasswordTest_CASE_MISSING_EMAIL_2 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:02:23</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:02:30</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 7s+445ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully retrieve their forgotten password upon providing valid credentials</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:02:23</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test ForgotPasswordTest_CASE_MISSING_EMAIL_2 using test data {Case=CASE_MISSING_EMAIL, Email Address=, Alert Message=Please Enter Email, Runmode=Y, Iteration=2, Browser=Chrome}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:23</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:25</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:28</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:30</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the LOGIN link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:30</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the OTP Code is NOT sent when an invalid email is entered</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='8cfa95e7-352f-4d8f-ae41-e4fceb0df6a4'>
+<div class='test-head'>
+<span class='test-name'>ForgotPasswordTest_CASE_INVALID_EMAIL_3 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:02:31</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:02:40</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 8s+963ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully retrieve their forgotten password upon providing valid credentials</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:02:31</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test ForgotPasswordTest_CASE_INVALID_EMAIL_3 using test data {Case=CASE_INVALID_EMAIL, Email Address=lokesh.kittu@gmail.com, Alert Message=Invalid Email, Runmode=Y, Iteration=3, Browser=Chrome}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:31</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:33</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:36</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:38</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the LOGIN link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:40</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the OTP Code is NOT sent when an invalid email is entered</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='87a9567e-3430-4825-8961-fa93f6182430'>
+<div class='test-head'>
+<span class='test-name'>SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:02:35</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:02:48</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 13s+6ms</span>
+</div>
+<div class='test-desc'></div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:02:35</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SearchProductAndFilterByPriceTest_Rs 51 to Rs 100_3 using test data {Product Name=Orange, Case=Rs 51 to Rs 100, Price Range=Rs 51 to Rs 100, Runmode=Y, Iteration=3, Browser=Chrome}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:35</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:37</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:38</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:48</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Filter by Price Range and verify if the Search Results are within the Price Range selected</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='f4d340fa-7d3a-4ee9-86f7-48c3c39aca9e'>
+<div class='test-head'>
+<span class='test-name'>SignInTest_CASE_OK_1 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:02:40</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:03:12</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 32s+7ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully login into his/her account upon providing valid credentails</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:02:40</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SignInTest_CASE_OK_1 using test data {Case=CASE_OK, Email Address=srinimarva@gmail.com, Alert Message=, Password=Orange@32, Runmode=Y, Iteration=1, Customer Name=SRINIVASAN, Browser=Chrome}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:45</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:48</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:51</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:54</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the LOGIN link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:12</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the user is able to login upon providing valid credentials</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='79bae0bf-20f9-40f2-9b8c-1f51c8b94c46'>
+<div class='test-head'>
+<span class='test-name'>SignUpTest_CASE_MISSING_FIRST_NAME_1 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:02:48</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:03:07</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 18s+21ms</span>
+</div>
+<div class='test-desc'>To verify if a new user is able to signup upon providing valid details and able to signup using their Facebook or Google accounts</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:02:49</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SignUpTest_CASE_MISSING_FIRST_NAME_1 using test data {Email Address=lokesh.kittu@gmail.com, Case=CASE_MISSING_FIRST_NAME, First Name=, Runmode=Y, Iteration=1, Password=Orange@27, Browser=Mozilla, Alert Message=Enter a first name., Last Name=Balaraman}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:55</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:02:58</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:01</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:02</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the SIGNUP link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:06</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Enter the required details for SignUp and click the SIGNUP button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:07</td>
+<td class='step-name'>Step 6</td>
+<td class='step-details'>Verify if the Sign Up is restricted when the First Name is not entered</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='e2f8fe41-2621-41c1-bc49-829daf3798ee'>
+<div class='test-head'>
+<span class='test-name'>ChangePasswordTest_CASE_PASSWORD_REQUIREMENT_2 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:03:06</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:03:51</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 44s+486ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully login into his/her account upon providing valid credentails and change password</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:03:06</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test ChangePasswordTest_CASE_PASSWORD_REQUIREMENT_2 using test data {Old Password=Orange@32, Case=CASE_PASSWORD_REQUIREMENT, Alert Message=Please enter at least 8 characters, Runmode=Y, Iteration=2, Confirm Password=Orange@32, New Password=Ora, Browser=Mozilla}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:06</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:08</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:41</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Login to Customer account</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:49</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Select MY ACCOUNT menu option and click the Change Password link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:51</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Password change is restricted as the Password is not of length at least 8 characters</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='8b50fa9e-1779-4171-b069-c963180c0c70'>
+<div class='test-head'>
+<span class='test-name'>SignUpTest_CASE_MISSING_LAST_NAME_2 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:03:07</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:03:19</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 12s+711ms</span>
+</div>
+<div class='test-desc'>To verify if a new user is able to signup upon providing valid details and able to signup using their Facebook or Google accounts</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:03:07</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SignUpTest_CASE_MISSING_LAST_NAME_2 using test data {Email Address=lokesh.kittu@gmail.com, Case=CASE_MISSING_LAST_NAME, First Name=Lokesh, Runmode=Y, Iteration=2, Password=Orange@27, Browser=Mozilla, Alert Message=Enter a last name., Last Name=}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:07</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:09</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:15</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:15</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the SIGNUP link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:19</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Enter the required details for SignUp and click the SIGNUP button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:19</td>
+<td class='step-name'>Step 6</td>
+<td class='step-details'>Verify if the Sign Up is restricted when the Last Name is not entered</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='7563209f-5640-4340-b47c-0e3c5f87824b'>
+<div class='test-head'>
+<span class='test-name'>SignInTest_CASE_OK_2 </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:03:12</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:03:24</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 11s+712ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully login into his/her account upon providing valid credentails</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:03:12</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SignInTest_CASE_OK_2 using test data {Case=CASE_OK, Email Address=srinimarva@gmail.com, Alert Message=, Password=Orange@31, Runmode=Y, Iteration=2, Customer Name=SRINIVASAN, Browser=Chrome}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:12</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:14</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:17</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:19</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the LOGIN link</td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>07:03:22</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the user is able to login upon providing valid credentials - FAIL - Incorrect credentials</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:03:24</td>
+<td class='step-name'>SignInTest_CASE_OK_2_Step 5.png</td>
+<td class='step-details'><img class='report-img' data-featherlight='file:////Users/srinivasanramu/git/BigBasket/executioninfo/screenshots/SignInTest_CASE_OK_2_Step 5.png' src='file:////Users/srinivasanramu/git/BigBasket/executioninfo/screenshots/SignInTest_CASE_OK_2_Step 5.png' /></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='fa077780-40d0-4159-9530-f21bcf03abed'>
+<div class='test-head'>
+<span class='test-name'>SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:03:20</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:03:52</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 32s+162ms</span>
+</div>
+<div class='test-desc'>To verify if a new user is able to signup upon providing valid details and able to signup using their Facebook or Google accounts</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:03:20</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SignUpTest_CASE_MISSING_EMAIL_ADDRESS_3 using test data {Email Address=, Case=CASE_MISSING_EMAIL_ADDRESS, First Name=Lokesh, Runmode=Y, Iteration=3, Password=Orange@27, Browser=Mozilla, Alert Message=Enter a valid e-mail address., Last Name=Balaraman}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:20</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:41</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:42</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:46</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the SIGNUP link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:51</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Enter the required details for SignUp and click the SIGNUP button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:52</td>
+<td class='step-name'>Step 6</td>
+<td class='step-details'>Verify if the Sign Up is restricted when the Email Address is not entered</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='57be7d65-5c10-43cf-9be3-68e042d5c2fc'>
+<div class='test-head'>
+<span class='test-name'>SignInTest_CASE_INVALID_EMAIL_3 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:03:24</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:03:38</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 13s+756ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully login into his/her account upon providing valid credentails</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:03:26</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SignInTest_CASE_INVALID_EMAIL_3 using test data {Case=CASE_INVALID_EMAIL, Email Address=, Alert Message=Enter a valid e-mail address., Password=Orange@27, Runmode=Y, Iteration=3, Customer Name=Srinivasan, Browser=Chrome}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:26</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:32</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:35</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:37</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the LOGIN link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:38</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the user is restricted to login upon providing invalid email address</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='6c527907-29e0-4471-9856-d3b8ed05d4a0'>
+<div class='test-head'>
+<span class='test-name'>SignInTest_CASE_INVALID_CREDENTIALS_4 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:03:38</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:03:52</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 13s+917ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully login into his/her account upon providing valid credentails</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:03:38</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SignInTest_CASE_INVALID_CREDENTIALS_4 using test data {Case=CASE_INVALID_CREDENTIALS, Email Address=srinimarva@gmail.com, Alert Message=Invalid email or password, Password=Ora, Runmode=Y, Iteration=4, Customer Name=Srinivasan, Browser=Chrome}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:39</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:44</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:47</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:50</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the LOGIN link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:52</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the user is restricted to login upon providing invalid email or password</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='859cfda8-0304-41c8-ac07-481f26798992'>
+<div class='test-head'>
+<span class='test-name'>ChangePasswordTest_CASE_PASSWORD_MISMATCH_3 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:03:51</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:04:37</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 46s+39ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully login into his/her account upon providing valid credentails and change password</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:03:51</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test ChangePasswordTest_CASE_PASSWORD_MISMATCH_3 using test data {Old Password=Orange@32, Case=CASE_PASSWORD_MISMATCH, Alert Message=Password mismatch, Runmode=Y, Iteration=3, Confirm Password=Orange@33, New Password=Orange@32, Browser=Mozilla}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:51</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:55</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:29</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Login to Customer account</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:34</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Select MY ACCOUNT menu option and click the Change Password link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:37</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Password change is restricted as the New Password and Confirm Password do not match</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='bc07d1b9-a5ba-4c91-8283-60a6b3d2a87c'>
+<div class='test-head'>
+<span class='test-name'>SignUpTest_CASE_MISSING_PASSWORD_4 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:03:52</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:04:05</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 12s+679ms</span>
+</div>
+<div class='test-desc'>To verify if a new user is able to signup upon providing valid details and able to signup using their Facebook or Google accounts</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:03:52</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SignUpTest_CASE_MISSING_PASSWORD_4 using test data {Email Address=lokesh.kittu@gmail.com, Case=CASE_MISSING_PASSWORD, First Name=Lokesh, Runmode=Y, Iteration=4, Password=, Browser=Mozilla, Alert Message=Please enter at least 8 characters, Last Name=Balaraman}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:53</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:56</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:01</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:01</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the SIGNUP link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:05</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Enter the required details for SignUp and click the SIGNUP button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:05</td>
+<td class='step-name'>Step 6</td>
+<td class='step-details'>Verify if the Sign Up is restricted when the Password is not entered</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='741659e1-ec78-47cc-b6d2-788d34bd2dac'>
+<div class='test-head'>
+<span class='test-name'>SignInTest_CASE_INVALID_PASSWORD_5 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:03:52</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:04:01</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 8s+800ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully login into his/her account upon providing valid credentails</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:03:52</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SignInTest_CASE_INVALID_PASSWORD_5 using test data {Case=CASE_INVALID_PASSWORD, Email Address=srinimarva@gmail.com, Alert Message=Enter a valid password, Password=, Runmode=Y, Iteration=5, Customer Name=Srinivasan, Browser=Chrome}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:53</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:55</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:03:58</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:00</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the LOGIN link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:01</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the user is restricted to login upon providing invalid password</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='c77584c6-b089-487b-928d-f06ab90abbd5'>
+<div class='test-head'>
+<span class='test-name'>SignInTest_CASE_FACEBOOK_LOGIN_6 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:04:01</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:04:22</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 20s+828ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully login into his/her account upon providing valid credentails</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:04:01</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SignInTest_CASE_FACEBOOK_LOGIN_6 using test data {Case=CASE_FACEBOOK_LOGIN, Email Address=mailtorsrinivasan@gmail.com, Alert Message=, Password=Orange@7, Runmode=Y, Iteration=6, Customer Name=Srinivasan, Browser=Chrome}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:01</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:04</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:07</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:09</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the LOGIN link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:22</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the user is able to login using his/her Facebook account</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='a9594452-1525-4cdb-9616-ec3182f6e35e'>
+<div class='test-head'>
+<span class='test-name'>SignUpTest_CASE_MISSING_CAPTCHA_5 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:04:05</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:04:30</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 25s+390ms</span>
+</div>
+<div class='test-desc'>To verify if a new user is able to signup upon providing valid details and able to signup using their Facebook or Google accounts</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:04:05</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SignUpTest_CASE_MISSING_CAPTCHA_5 using test data {Email Address=lokesh.kittu@gmail.com, Case=CASE_MISSING_CAPTCHA, First Name=Lokesh, Runmode=y, Iteration=5, Password=Orange@27, Browser=Mozilla, Alert Message=Enter the string in image, Last Name=Balaraman}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:05</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:07</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:11</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:11</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the SIGNUP link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:30</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Enter the required details for SignUp and click the SIGNUP button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:30</td>
+<td class='step-name'>Step 6</td>
+<td class='step-details'>Verify if the Sign Up is restricted when the Captcha is not entered</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='798f2787-ec85-4a2f-8503-f1c8552478d7'>
+<div class='test-head'>
+<span class='test-name'>SignInTest_CASE_GOOGLE_LOGIN_7 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:04:22</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:04:53</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 30s+492ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully login into his/her account upon providing valid credentails</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:04:23</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test SignInTest_CASE_GOOGLE_LOGIN_7 using test data {Case=CASE_GOOGLE_LOGIN, Email Address=srinimarva@gmail.com, Alert Message=, Password=Orange@27, Runmode=Y, Iteration=7, Customer Name=Srinivasan, Browser=Chrome}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:23</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:27</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:31</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Click the Skip and Explore button</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:34</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Click the LOGIN link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:53</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the user is able to login using his/her Google account</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='de1aaa8f-8e81-4c2e-a41d-9a8752e736f2'>
+<div class='test-head'>
+<span class='test-name'>AddEmailAddressTest_CASE_MISSING_EMAIL_1 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:04:31</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:08:14</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 3m 42s+873ms</span>
+</div>
+<div class='test-desc'>To verify if new Email Address can be added to existing Customer account</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:04:31</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test AddEmailAddressTest_CASE_MISSING_EMAIL_1 using test data {Case=CASE_MISSING_EMAIL, Email Address=, Alert Message=Please enter an email address, Runmode=Y, Iteration=1, Browser=Mozilla}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:07:49</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:07:53</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:08:08</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Login to Customer account</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:08:12</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Select MY ACCOUNT menu option and click the Email Addresses link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:08:14</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the Add new email address restricted because of null value</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='37b33e4e-913c-469d-8a0a-8af6c772d685'>
+<div class='test-head'>
+<span class='test-name'>ChangePasswordTest_CASE_OK_4 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:04:37</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:06:00</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 23s+131ms</span>
+</div>
+<div class='test-desc'>To verify if an existing user is able to successfully login into his/her account upon providing valid credentails and change password</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:04:37</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test ChangePasswordTest_CASE_OK_4 using test data {Old Password=Orange@32, Case=CASE_OK, Alert Message=Successfully updated the password., Runmode=Y, Iteration=4, Confirm Password=Orange@32, New Password=Orange@32, Browser=Mozilla}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:37</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:04:39</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:05:29</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Login to Customer account</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:05:33</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Select MY ACCOUNT menu option and click the Change Password link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:05:37</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Password changed successfully</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:06:00</td>
+<td class='step-name'>Step 6</td>
+<td class='step-details'>Login to Customer account after successful password change</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='e5303684-dddb-413b-bf9e-e60d3696c3ce'>
+<div class='test-head'>
+<span class='test-name'>AddEmailAddressTest_CASE_INVALID_EMAIL_2 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:08:14</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:08:41</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 27s+837ms</span>
+</div>
+<div class='test-desc'>To verify if new Email Address can be added to existing Customer account</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:08:14</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test AddEmailAddressTest_CASE_INVALID_EMAIL_2 using test data {Case=CASE_INVALID_EMAIL, Email Address=sri, Alert Message=Please enter a valid email address, Runmode=Y, Iteration=2, Browser=Mozilla}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:08:14</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:08:16</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:08:36</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Login to Customer account</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:08:40</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Select MY ACCOUNT menu option and click the Email Addresses link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:08:41</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the Add new email address restricted because of invalid email address</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='08e69b4f-3dc2-4c51-999e-c33698a98ec2'>
+<div class='test-head'>
+<span class='test-name'>AddEmailAddressTest_CASE_EXISTING_EMAIL_3 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:08:41</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:09:01</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 19s+653ms</span>
+</div>
+<div class='test-desc'>To verify if new Email Address can be added to existing Customer account</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:08:42</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test AddEmailAddressTest_CASE_EXISTING_EMAIL_3 using test data {Case=CASE_EXISTING_EMAIL, Email Address=srinimarva@gmail.com, Alert Message=This email address is already in use by you., Runmode=Y, Iteration=3, Browser=Mozilla}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:08:42</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:08:44</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:08:56</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Login to Customer account</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:09:00</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Select MY ACCOUNT menu option and click the Email Addresses link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:09:01</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the Add new email address restricted because of entered email address already exists</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active fail ' extentid='623e469a-1209-4126-a9a4-efebb266bdd9'>
+<div class='test-head'>
+<span class='test-name'>AddEmailAddressTest_CASE_OK_4 </span>
+<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:09:01</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:09:22</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 20s+530ms</span>
+</div>
+<div class='test-desc'>To verify if new Email Address can be added to existing Customer account</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:09:01</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test AddEmailAddressTest_CASE_OK_4 using test data {Case=CASE_OK, Email Address=aroon.irs@gmail.com, Alert Message=, Runmode=Y, Iteration=4, Browser=Mozilla}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:09:01</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:09:03</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:09:16</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Login to Customer account</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:09:19</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Select MY ACCOUNT menu option and click the Email Addresses link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:09:21</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Verify if the new email address can be added to the customer account</td>
+</tr>
+<tr>
+<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
+<td class='timestamp'>07:09:21</td>
+<td class='step-name'>Step 6</td>
+<td class='step-details'>Verify if the aroon.irs@gmail.com is added to the Customer account - FAIL</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:09:22</td>
+<td class='step-name'>AddEmailAddressTest_CASE_OK_4_Step 6.png</td>
+<td class='step-details'><img class='report-img' data-featherlight='file:////Users/srinivasanramu/git/BigBasket/executioninfo/screenshots/AddEmailAddressTest_CASE_OK_4_Step 6.png' src='file:////Users/srinivasanramu/git/BigBasket/executioninfo/screenshots/AddEmailAddressTest_CASE_OK_4_Step 6.png' /></td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='76a926c9-8e01-44ee-aff9-7db12ad6f30e'>
+<div class='test-head'>
+<span class='test-name'>RemoveEmailAddressTest_CASE_CANCEL_1 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:09:22</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:10:01</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 39s+2ms</span>
+</div>
+<div class='test-desc'>To verify if existing Email Address can be removed from existing Customer account</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:09:22</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test RemoveEmailAddressTest_CASE_CANCEL_1 using test data {Case=CASE_CANCEL, Runmode=Y, Iteration=1, Browser=Mozilla}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:09:29</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:09:32</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:09:56</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Login to Customer account</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:10:00</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Select MY ACCOUNT menu option and click the Email Addresses link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:10:01</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Click the Remove button, click the CANCEL button and verify if the Email Address is NOT removed</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+<li class='collection-item test displayed active pass ' extentid='c79cf15c-392b-46a4-9f2f-07d3c68734f3'>
+<div class='test-head'>
+<span class='test-name'>RemoveEmailAddressTest_CASE_OK_2 </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
+<span class='category-assigned hide '></span>
+</div>
+<div class='test-body'>
+<div class='test-info'>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2016-06-29 07:10:01</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2016-06-29 07:10:28</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 27s+278ms</span>
+</div>
+<div class='test-desc'>To verify if existing Email Address can be removed from existing Customer account</div>
+<div class='test-attributes'>
+</div>
+<div class='test-steps'>
+<table class='bordered table-results'>
+<thead>
+<tr>
+<th>Status</th>
+<th>Timestamp</th>
+<th>StepName</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>07:10:01</td>
+<td class='step-name'>Test Data</td>
+<td class='step-details'>Starting the test RemoveEmailAddressTest_CASE_OK_2 using test data {Case=CASE_OK, Runmode=Y, Iteration=2, Browser=Mozilla}</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:10:01</td>
+<td class='step-name'>Step 1</td>
+<td class='step-details'>Launch the required browser</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:10:03</td>
+<td class='step-name'>Step 2</td>
+<td class='step-details'>Connect to http://www.bigbasket.com</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:10:23</td>
+<td class='step-name'>Step 3</td>
+<td class='step-details'>Login to Customer account</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:10:27</td>
+<td class='step-name'>Step 4</td>
+<td class='step-details'>Select MY ACCOUNT menu option and click the Email Addresses link</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>07:10:28</td>
+<td class='step-name'>Step 5</td>
+<td class='step-details'>Click the Remove button, click the OK button and verify if the Email Address is removed</td>
+</tr>
+</tbody>
+</table>
+<ul class='collapsible node-list' data-collapsible='accordion'>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id='test-details-wrapper' class='col _addedCell2'>
+<div class='contents'>
+<div class='card-panel details-view'>
+<h5 class='details-name'></h5>
+<div class='details-container'>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- /tests -->
+
+<!-- categories -->
+<!-- /categories -->
+
+<!-- exceptions -->
+<!-- /exceptions -->
+
+<!-- testrunner logs -->
+<!-- /testrunner logs -->
+
+</div>
+<!-- /container -->
+
+<!-- test dashboard counts setting -->
+<div id='test-count-setting' class='modal bottom-sheet'> 
+<div class='modal-content'> 
+<h5>Configure Tests Count Setting</h5> 
+<input name='test-count-setting' type='radio' id='parentWithoutNodes' class='with-gap'> 
+<label for='parentWithoutNodes'>Parent Tests Only (Does not include child nodes in counts)</label> 
+<br> 
+<input name='test-count-setting' type='radio' id='parentWithoutNodesAndNodes' class='with-gap'> 
+<label for='parentWithoutNodesAndNodes'>Parent Tests Without Child Tests + Child Tests</label> 
+<br> 
+<input name='test-count-setting' type='radio' id='childNodes' class='with-gap'> 
+<label for='childNodes'>Child Tests Only</label> 
+</div> 
+<div class='modal-footer'> 
+<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+</div> 
+</div>
+<!-- /test dashboard counts setting -->
+
+<!-- filter for step status -->
+<div id='step-status-filter' class='modal bottom-sheet'> 
+<div class='modal-content'> 
+<h5>Select status</h5> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-pass'> 
+<label for='step-dashboard-filter-pass'>Pass</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fail'> 
+<label for='step-dashboard-filter-fail'>Fail</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-fatal'> 
+<label for='step-dashboard-filter-fatal'>Fatal</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-error'> 
+<label for='step-dashboard-filter-error'>Error</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-warning'> 
+<label for='step-dashboard-filter-warning'>Warning</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-skip'> 
+<label for='step-dashboard-filter-skip'>Skipped</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-info'> 
+<label for='step-dashboard-filter-info'>Info</label> 
+<br> 
+<input checked class='filled-in' type='checkbox' id='step-dashboard-filter-unknown'> 
+<label for='step-dashboard-filter-unknown'>Unknown</label> 
+</div>
+<div class='modal-footer'> 
+<a href='#!' class='modal-action modal-close waves-effect waves-green btn'>Save</a> 
+</div> 
+</div>
+<!-- /filter for step status -->
+
+<script src='https://cdn.rawgit.com/anshooarora/extentreports/c936a26fc8bb9c5fc0253b5bc6f289e1d14bb595/cdn/extent.js' type='text/javascript'></script>
+
+<script>$(document).ready(function() { $('.logo span').html('ExtentReports'); });</script>
+<script>
+
+            
+                $(document).ready(function() {
+                    
+                });
+            
+        
+</script>
+</body>
+</html>

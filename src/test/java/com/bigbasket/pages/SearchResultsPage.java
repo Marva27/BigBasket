@@ -288,8 +288,8 @@ public class SearchResultsPage {
 				}
 			}
 			if(!filterWorks){
-				UtilFunctions.writeLog(log, Constants.FAIL+" - "+productName+" is out of range");
-				return Constants.FAIL+" - "+productName+" is out of range";
+				UtilFunctions.writeLog(log, Constants.FAIL+" - "+productName+" is out of range. "+"Original product price is: "+productPrice+" Offer product price is: "+convertedOfferProductPrice+" % discounted is: "+percentageDiscounted);
+				return Constants.FAIL+" - "+productName+" is out of range. "+"Original product price is: "+productPrice+" Offer product price is: "+convertedOfferProductPrice+" % discounted is: "+percentageDiscounted;
 			}else{
 				UtilFunctions.writeLog(log, Constants.PASS);
 				return Constants.PASS;

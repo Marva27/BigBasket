@@ -1,14 +1,27 @@
-2016-06-29 08:03:03,626 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Starting SearchProductAndFilterByPriceTest_< Rs 20_1
-2016-06-29 08:03:03,626 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Executing SearchProductAndFilterByPriceTest_< Rs 20_1 using {Product Name=Orange, Case=< Rs 20, Price Range=Less than Rs 20, Runmode=Y, Iteration=1, Browser=Chrome}
-2016-06-29 08:03:03,626 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Starting function openBrowser - Chrome
-2016-06-29 08:03:03,626 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] {Mozilla=null, Chrome=null, IE=null}
-2016-06-29 08:03:03,627 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Opening fresh browser - Chrome
-2016-06-29 08:03:20,988 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Starting function clickSkipAndExplore in HomePage.class
-2016-06-29 08:03:24,556 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Ending function clickSkipAndExplore in HomePage.class with PASS
-2016-06-29 08:03:24,628 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Starting function searchProduct in SearchResultsPage.class
-2016-06-29 08:03:29,903 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Ending function searchProduct in SearchResultsPage.class
-2016-06-29 08:03:30,063 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Starting function filterByPriceRange in SearchResultsPage.class
-2016-06-29 08:03:32,752 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Ending function filterByPriceRange in SearchResultsPage.class
-2016-06-29 08:03:33,756 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Starting function verifySearchResultsByPriceRange in SearchResultsPage.class
-2016-06-29 08:03:35,157 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Ending function verifySearchResultsByPriceRange in SearchResultsPage.class with PASS
-2016-06-29 08:03:35,158 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Ending SearchProductAndFilterByPriceTest_< Rs 20_1
+2016-06-30 10:53:37,401 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Starting SearchProductAndFilterByPriceTest_< Rs 20_1
+2016-06-30 10:53:37,401 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Executing SearchProductAndFilterByPriceTest_< Rs 20_1 using {Product Name=Orange, Case=< Rs 20, Price Range=Less than Rs 20, Runmode=Y, Iteration=1, Browser=Chrome}
+2016-06-30 10:53:37,401 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Starting function openBrowser - Chrome
+2016-06-30 10:53:37,401 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] {Mozilla=null, Chrome=null, IE=null}
+2016-06-30 10:53:37,401 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Opening fresh browser - Chrome
+2016-06-30 10:57:28,524 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Starting function clickSkipAndExplore in HomePage.class
+2016-06-30 10:57:32,756 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-30 10:57:32,759 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Starting function searchProduct in SearchResultsPage.class
+2016-06-30 10:57:36,964 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Ending function searchProduct in SearchResultsPage.class
+2016-06-30 10:57:37,050 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Starting function filterByPriceRange in SearchResultsPage.class
+2016-06-30 10:57:37,230 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Product price is Less than Rs 20 (17)
+2016-06-30 10:57:38,759 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Ending function filterByPriceRange in SearchResultsPage.class
+2016-06-30 10:57:39,763 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Starting function verifySearchResultsByPriceRange in SearchResultsPage.class
+2016-06-30 10:57:39,997 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Converted product price is 15.0
+2016-06-30 10:57:40,140 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Converted product price is 5.0
+2016-06-30 10:57:40,244 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Converted product price is 15.0
+2016-06-30 10:57:40,362 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Converted product price is 20.0
+2016-06-30 10:57:40,449 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Converted product price is 7.0
+2016-06-30 10:57:40,516 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Converted product price is 5.0
+2016-06-30 10:57:40,606 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Converted product price is 5.0
+2016-06-30 10:57:40,676 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Converted product price is 10.0
+2016-06-30 10:57:40,751 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Converted product price is 12.0
+2016-06-30 10:57:40,823 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Converted product price is 15.0
+2016-06-30 10:57:40,887 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Converted product price is 10.0
+2016-06-30 10:57:40,951 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Converted product price is 20.0
+2016-06-30 10:57:40,951 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Ending function verifySearchResultsByPriceRange in SearchResultsPage.class with PASS
+2016-06-30 10:57:40,951 DEBUG [SearchProductAndFilterByPriceTest_< Rs 20_1] Ending SearchProductAndFilterByPriceTest_< Rs 20_1

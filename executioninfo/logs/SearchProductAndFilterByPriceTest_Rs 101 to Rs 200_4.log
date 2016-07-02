@@ -1,0 +1,34 @@
+2016-06-30 10:58:06,757 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Starting SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4
+2016-06-30 10:58:06,758 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Executing SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4 using {Product Name=Orange, Case=Rs 101 to Rs 200, Price Range=Rs 101 to Rs 200, Runmode=Y, Iteration=4, Browser=Chrome}
+2016-06-30 10:58:06,758 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Starting function openBrowser - Chrome
+2016-06-30 10:58:06,758 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] {Mozilla=null, Chrome=RemoteWebDriver: chrome on MAC (c924c0bd-dad6-43b4-8779-5f3735cd5894), IE=null}
+2016-06-30 10:58:06,758 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Using existing browser - Chrome
+2016-06-30 10:58:09,063 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Starting function clickSkipAndExplore in HomePage.class
+2016-06-30 10:58:12,004 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-30 10:58:12,006 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Starting function searchProduct in SearchResultsPage.class
+2016-06-30 10:58:15,057 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Ending function searchProduct in SearchResultsPage.class
+2016-06-30 10:58:15,068 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Starting function filterByPriceRange in SearchResultsPage.class
+2016-06-30 10:58:15,156 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Product price is Less than Rs 20 (17)
+2016-06-30 10:58:15,210 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Product price is Rs 21 to Rs 50 (37)
+2016-06-30 10:58:15,291 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Product price is Rs 51 to Rs 100 (44)
+2016-06-30 10:58:15,366 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Product price is Rs 101 to Rs 200 (71)
+2016-06-30 10:58:16,869 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Ending function filterByPriceRange in SearchResultsPage.class
+2016-06-30 10:58:17,873 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Starting function verifySearchResultsByPriceRange in SearchResultsPage.class
+2016-06-30 10:58:18,394 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 149.0
+2016-06-30 10:58:18,570 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 125.0
+2016-06-30 10:58:18,739 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 194.0
+2016-06-30 10:58:18,914 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 115.0
+2016-06-30 10:58:19,003 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 145.0
+2016-06-30 10:58:19,100 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 144.0
+2016-06-30 10:58:19,292 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 125.0
+2016-06-30 10:58:19,375 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 198.0
+2016-06-30 10:58:19,492 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 111.0
+2016-06-30 10:58:19,612 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 198.0
+2016-06-30 10:58:19,736 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 135.0
+2016-06-30 10:58:19,850 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 119.0
+2016-06-30 10:58:19,960 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 125.0
+2016-06-30 10:58:20,053 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 155.0
+2016-06-30 10:58:20,152 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 105.0
+2016-06-30 10:58:20,250 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Converted product price is 150.0
+2016-06-30 10:58:20,250 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Ending function verifySearchResultsByPriceRange in SearchResultsPage.class with PASS
+2016-06-30 10:58:20,250 DEBUG [SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4] Ending SearchProductAndFilterByPriceTest_Rs 101 to Rs 200_4

@@ -1,15 +1,15 @@
-2016-06-29 08:04:40,861 DEBUG [SignInTest_CASE_OK_2] Starting SignInTest_CASE_OK_2
-2016-06-29 08:04:40,861 DEBUG [SignInTest_CASE_OK_2] Executing SignInTest_CASE_OK_2 using {Case=CASE_OK, Email Address=srinimarva@gmail.com, Alert Message=, Password=Orange@31, Runmode=Y, Iteration=2, Customer Name=SRINIVASAN, Browser=Chrome}
-2016-06-29 08:04:40,862 DEBUG [SignInTest_CASE_OK_2] Starting function openBrowser - Chrome
-2016-06-29 08:04:40,862 DEBUG [SignInTest_CASE_OK_2] {Mozilla=null, Chrome=RemoteWebDriver: chrome on MAC (53cc9652-002d-42da-bbf2-9eb12115cd62), IE=null}
-2016-06-29 08:04:40,862 DEBUG [SignInTest_CASE_OK_2] Using existing browser - Chrome
-2016-06-29 08:04:41,045 DEBUG [SignInTest_CASE_OK_2] Starting connectURL function trying to connect http://www.bigbasket.com
-2016-06-29 08:04:43,903 DEBUG [SignInTest_CASE_OK_2] Ending connectURL function PASS
-2016-06-29 08:04:43,904 DEBUG [SignInTest_CASE_OK_2] Starting function clickSkipAndExplore in HomePage.class
-2016-06-29 08:04:47,148 DEBUG [SignInTest_CASE_OK_2] Ending function clickSkipAndExplore in HomePage.class with PASS
-2016-06-29 08:04:47,149 DEBUG [SignInTest_CASE_OK_2] Starting function clickLOGINLink in HomePage.class
-2016-06-29 08:04:50,289 DEBUG [SignInTest_CASE_OK_2] Ending function clickLOGINLink in HomePage.class with PASS
-2016-06-29 08:04:50,291 DEBUG [SignInTest_CASE_OK_2] Starting doLogin function in SignInPage.class
-2016-06-29 08:04:52,774 DEBUG [SignInTest_CASE_OK_2] Ending doLogin function in SignInPage.class
-2016-06-29 08:04:52,776 DEBUG [SignInTest_CASE_OK_2] Starting function verifyIfLoginSuccess in HomePage.class
-2016-06-29 08:04:52,867 DEBUG [SignInTest_CASE_OK_2] Ending function verifyIfLoginSuccess in HomePage.class FAIL - Incorrect credentials
+2016-06-30 10:50:57,212 DEBUG [SignInTest_CASE_OK_2] Starting SignInTest_CASE_OK_2
+2016-06-30 10:50:57,212 DEBUG [SignInTest_CASE_OK_2] Executing SignInTest_CASE_OK_2 using {Case=CASE_OK, Email Address=srinimarva@gmail.com, Alert Message=, Password=Orange@31, Runmode=Y, Iteration=2, Customer Name=SRINIVASAN, Browser=Chrome}
+2016-06-30 10:50:57,212 DEBUG [SignInTest_CASE_OK_2] Starting function openBrowser - Chrome
+2016-06-30 10:50:57,212 DEBUG [SignInTest_CASE_OK_2] {Mozilla=null, Chrome=RemoteWebDriver: chrome on MAC (9daf47b5-5017-4a48-a736-d5b6a1bed306), IE=null}
+2016-06-30 10:50:57,212 DEBUG [SignInTest_CASE_OK_2] Using existing browser - Chrome
+2016-06-30 10:50:57,355 DEBUG [SignInTest_CASE_OK_2] Starting connectURL function trying to connect http://www.bigbasket.com
+2016-06-30 10:50:59,719 DEBUG [SignInTest_CASE_OK_2] Ending connectURL function PASS
+2016-06-30 10:50:59,719 DEBUG [SignInTest_CASE_OK_2] Starting function clickSkipAndExplore in HomePage.class
+2016-06-30 10:51:03,449 DEBUG [SignInTest_CASE_OK_2] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-30 10:51:03,457 DEBUG [SignInTest_CASE_OK_2] Starting function clickLOGINLink in HomePage.class
+2016-06-30 10:51:06,164 DEBUG [SignInTest_CASE_OK_2] Ending function clickLOGINLink in HomePage.class with PASS
+2016-06-30 10:51:06,166 DEBUG [SignInTest_CASE_OK_2] Starting doLogin function in SignInPage.class
+2016-06-30 10:51:08,613 DEBUG [SignInTest_CASE_OK_2] Ending doLogin function in SignInPage.class
+2016-06-30 10:51:08,614 DEBUG [SignInTest_CASE_OK_2] Starting function verifyIfLoginSuccess in HomePage.class
+2016-06-30 10:51:08,755 DEBUG [SignInTest_CASE_OK_2] Ending function verifyIfLoginSuccess in HomePage.class FAIL - Incorrect credentials

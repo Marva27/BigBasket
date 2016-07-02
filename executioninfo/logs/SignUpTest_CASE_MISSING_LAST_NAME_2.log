@@ -1,16 +1,16 @@
-2016-06-29 08:04:38,277 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting SignUpTest_CASE_MISSING_LAST_NAME_2
-2016-06-29 08:04:38,277 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Executing SignUpTest_CASE_MISSING_LAST_NAME_2 using {Email Address=lokesh.kittu@gmail.com, Case=CASE_MISSING_LAST_NAME, First Name=Lokesh, Runmode=Y, Iteration=2, Password=Orange@27, Browser=Mozilla, Alert Message=Enter a last name., Last Name=}
-2016-06-29 08:04:38,278 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting function openBrowser - Mozilla
-2016-06-29 08:04:38,278 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] {Mozilla=RemoteWebDriver: firefox on MAC (8abd1c18-d23e-40f6-a90a-b66530a02da3), Chrome=null, IE=null}
-2016-06-29 08:04:38,278 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Using existing browser - Mozilla
-2016-06-29 08:04:38,348 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting connectURL function trying to connect http://www.bigbasket.com
-2016-06-29 08:04:42,827 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Ending connectURL function PASS
-2016-06-29 08:04:42,828 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting function clickSkipAndExplore in HomePage.class
-2016-06-29 08:04:47,176 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Ending function clickSkipAndExplore in HomePage.class with PASS
-2016-06-29 08:04:47,177 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting function clickSIGNUPLink in HomePage.class
-2016-06-29 08:04:50,578 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Ending function clickSIGNUPLink in HomePage.class with PASS
-2016-06-29 08:04:50,580 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting function enterSignUpDetails in SignUpPage.class
-2016-06-29 08:04:52,026 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Ending function enterSignUpDetails in SignUpPage.class with PASS
-2016-06-29 08:04:52,029 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting function verifySignUpFailure in SignUpPage.class
-2016-06-29 08:04:52,163 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Ending function verifySignUpFailure in SignUpPage.class with PASS
-2016-06-29 08:04:52,164 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Ending SignUpTest_CASE_MISSING_LAST_NAME_2
+2016-06-30 10:52:44,611 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting SignUpTest_CASE_MISSING_LAST_NAME_2
+2016-06-30 10:52:44,615 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Executing SignUpTest_CASE_MISSING_LAST_NAME_2 using {Email Address=lokesh.kittu@gmail.com, Case=CASE_MISSING_LAST_NAME, First Name=Lokesh, Runmode=Y, Iteration=2, Password=Orange@27, Browser=Mozilla, Alert Message=Enter a last name., Last Name=}
+2016-06-30 10:52:44,680 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting function openBrowser - Mozilla
+2016-06-30 10:52:44,681 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] {Mozilla=RemoteWebDriver: firefox on MAC (0dd70833-ed99-4c53-95a7-c4825f915126), Chrome=null, IE=null}
+2016-06-30 10:52:44,681 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Using existing browser - Mozilla
+2016-06-30 10:52:44,745 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting connectURL function trying to connect http://www.bigbasket.com
+2016-06-30 10:52:47,497 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Ending connectURL function PASS
+2016-06-30 10:52:47,497 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting function clickSkipAndExplore in HomePage.class
+2016-06-30 10:52:50,789 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-30 10:52:50,789 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting function clickSIGNUPLink in HomePage.class
+2016-06-30 10:52:53,691 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Ending function clickSIGNUPLink in HomePage.class with PASS
+2016-06-30 10:52:53,712 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting function enterSignUpDetails in SignUpPage.class
+2016-06-30 10:52:54,691 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Ending function enterSignUpDetails in SignUpPage.class with PASS
+2016-06-30 10:52:54,693 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Starting function verifySignUpFailure in SignUpPage.class
+2016-06-30 10:52:54,818 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Ending function verifySignUpFailure in SignUpPage.class with PASS
+2016-06-30 10:52:54,818 DEBUG [SignUpTest_CASE_MISSING_LAST_NAME_2] Ending SignUpTest_CASE_MISSING_LAST_NAME_2

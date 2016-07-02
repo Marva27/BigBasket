@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -175,7 +176,7 @@ public class SearchResultsPage {
 		UtilFunctions.writeLog(log, "Starting function filterByPriceRange in SearchResultsPage.class");
 		try{
 			for(WebElement eachElement:chkPriceRange){
-				System.out.println(eachElement.getText());
+				UtilFunctions.writeLog(log, "Product price is "+eachElement.getText());
 				if(eachElement.getText().contains(priceRange)){
 					Actions actions = new Actions(browser);
 					actions.moveToElement(h4Price).perform();
@@ -214,7 +215,7 @@ public class SearchResultsPage {
 				if(productPrice.length()!=0){
 					productPrice = productPrice.replace("Rs. ", "");
 					convertedProductPrice = Double.parseDouble(productPrice);
-					System.out.println(convertedProductPrice);
+					UtilFunctions.writeLog(log, "Converted product price is "+convertedProductPrice);
 					if(convertedProductPrice>=lowPrice && convertedProductPrice<=highPrice){
 						filterWorks = true;
 					}else{
@@ -236,33 +237,29 @@ public class SearchResultsPage {
 		}
 	}
 	
-	public SearchResultsPage filterByDiscounts(WebDriver browser, String discountRange){
+	public SearchResultsPage filterByDiscounts(Logger log, WebDriver browser,  String discountRange) throws InterruptedException{
+		UtilFunctions.writeLog(log, "Starting function filterByDiscounts in SearchResultsPage.class");
 		try{
+			((JavascriptExecutor)browser).executeScript("arguments[0].scrollIntoView();", h4Discounts);
+			h4Discounts.click();
 			for(WebElement eachElement:chkDiscounts){
-				System.out.println(eachElement.getText());
-				if(eachElement.getText().contains(discountRange)){
-					Actions actions = new Actions(browser);
-					actions.moveToElement(h4Discounts).perform();
-					actions.moveToElement(eachElement).perform();
-					try{
-						eachElement.click();
-					}catch(Exception e){
-						if(!eachElement.isSelected()){
-							eachElement.click();
-						}
-					}
-					Thread.sleep(1000);
+				String currentDiscount = eachElement.getText();
+				if(currentDiscount.contains(discountRange)){
+					eachElement.click();
 					browser.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-					return PageFactory.initElements(browser, SearchResultsPage.class);
+					UtilFunctions.writeLog(log, "Selected "+currentDiscount);
+					break;
 				}
 			}
 		}catch(Exception e){
-			System.out.println(e.getMessage());
+			UtilFunctions.writeLog(log, "Ending function filterByDiscounts in SearchResultsPage.class with "+Constants.ERROR+"-"+e.getMessage());
 		}
-		return null;
+		UtilFunctions.writeLog(log, "Ending function filterByDiscounts in SearchResultsPage.class");
+		return PageFactory.initElements(browser, SearchResultsPage.class);
 	}
 	
-	public String verifySearchResultsByDiscountsRange(WebDriver browser, double lowerDiscountPercentage, double higherDiscountPercentage) throws InterruptedException{
+	public String verifySearchResultsByDiscountsRange(Logger log, WebDriver browser, double lowerDiscountPercentage, double higherDiscountPercentage) throws InterruptedException{
+		UtilFunctions.writeLog(log, "Starting function verifySearchResultsByDiscountsRange in SearchResultsPage.class");
 		boolean filterWorks = false;
 		double convertedOriginalProductPrice = 0.0;
 		double convertedOfferProductPrice = 0.0;
@@ -275,29 +272,30 @@ public class SearchResultsPage {
 			for(int i=0;i<lblOriginalPrice.size();i++){
 				actions.moveToElement(lblOriginalPrice.get(i)).perform();
 				productName = lblProductName.get(i).getText();
-				System.out.println("Original Product Price is "+lblOriginalPrice.get(i).getText());
+				UtilFunctions.writeLog(log, "Original Product Price is "+lblOriginalPrice.get(i).getText());
 				productPrice = lblOriginalPrice.get(i).getText().replace("Rs. ", "");
 				convertedOriginalProductPrice = Double.parseDouble(productPrice);
-				System.out.println("Discount Product Price is "+lblOfferPrice.get(i).getText());
+				UtilFunctions.writeLog(log, "Discount Product Price is "+lblOfferPrice.get(i).getText());
 				productPrice = lblOfferPrice.get(i).getText().replace("Rs. ", "");
 				convertedOfferProductPrice = Double.parseDouble(productPrice);
 				percentageDiscounted = Math.round(100-((convertedOfferProductPrice/convertedOriginalProductPrice)*100));
-				System.out.println("% discounted is: "+percentageDiscounted);
+				UtilFunctions.writeLog(log, "% discounted is: "+percentageDiscounted);
 				if(percentageDiscounted>=lowerDiscountPercentage && percentageDiscounted<=higherDiscountPercentage){
 					filterWorks = true;
 				}else{
 					filterWorks = false;
 					break;
 				}
-				
 			}
 			if(!filterWorks){
+				UtilFunctions.writeLog(log, Constants.FAIL+" - "+productName+" is out of range");
 				return Constants.FAIL+" - "+productName+" is out of range";
 			}else{
+				UtilFunctions.writeLog(log, Constants.PASS);
 				return Constants.PASS;
 			}
 		}catch(Exception e){
-			System.out.println(e.getMessage());
+			UtilFunctions.writeLog(log, Constants.ERROR+" - "+e.getMessage());
 			return Constants.ERROR;
 		}
 	}

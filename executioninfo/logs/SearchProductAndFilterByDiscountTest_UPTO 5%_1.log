@@ -1,0 +1,123 @@
+2016-06-30 10:49:33,574 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Starting SearchProductAndFilterByDiscountTest_UPTO 5%_1
+2016-06-30 10:49:33,574 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Executing SearchProductAndFilterByDiscountTest_UPTO 5%_1 using {Product Name=Drinks, Case=UPTO 5%, Discount Range=Upto 5%, Runmode=Y, Iteration=1, Browser=Mozilla}
+2016-06-30 10:49:33,574 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Starting function openBrowser - Mozilla
+2016-06-30 10:49:33,574 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] {Mozilla=null, Chrome=null, IE=null}
+2016-06-30 10:49:33,575 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Opening fresh browser - Mozilla
+2016-06-30 10:50:01,729 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Starting function clickSkipAndExplore in HomePage.class
+2016-06-30 10:50:07,360 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-30 10:50:07,450 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Starting function searchProduct in SearchResultsPage.class
+2016-06-30 10:50:12,873 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Ending function searchProduct in SearchResultsPage.class
+2016-06-30 10:50:12,878 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Starting function filterByDiscounts in SearchResultsPage.class
+2016-06-30 10:50:14,055 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Selected Upto 5% (36)
+2016-06-30 10:50:14,063 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Ending function filterByDiscounts in SearchResultsPage.class
+2016-06-30 10:50:14,068 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Starting function verifySearchResultsByDiscountsRange in SearchResultsPage.class
+2016-06-30 10:50:16,540 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 69
+2016-06-30 10:50:16,868 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 65.55
+2016-06-30 10:50:17,001 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:17,536 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 99
+2016-06-30 10:50:17,781 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 94.05
+2016-06-30 10:50:17,936 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:18,631 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 69
+2016-06-30 10:50:18,990 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 65.55
+2016-06-30 10:50:19,131 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:19,848 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 69
+2016-06-30 10:50:20,242 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 65.55
+2016-06-30 10:50:20,342 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:20,808 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 83
+2016-06-30 10:50:21,113 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 78.85
+2016-06-30 10:50:21,193 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:22,152 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 83
+2016-06-30 10:50:22,750 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 78.85
+2016-06-30 10:50:23,092 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:24,935 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 71
+2016-06-30 10:50:25,282 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 67.45
+2016-06-30 10:50:25,414 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:25,885 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 71
+2016-06-30 10:50:26,074 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 67.45
+2016-06-30 10:50:26,160 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:26,836 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 71
+2016-06-30 10:50:27,181 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 67.45
+2016-06-30 10:50:27,366 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:27,968 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 390
+2016-06-30 10:50:28,454 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 370.50
+2016-06-30 10:50:28,655 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:29,314 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 390
+2016-06-30 10:50:29,560 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 370.50
+2016-06-30 10:50:29,674 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:30,180 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 390
+2016-06-30 10:50:30,352 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 370.50
+2016-06-30 10:50:30,430 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:30,817 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 89
+2016-06-30 10:50:31,046 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 84.55
+2016-06-30 10:50:31,240 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:31,817 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 510
+2016-06-30 10:50:32,173 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 484.50
+2016-06-30 10:50:32,347 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:32,914 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 104
+2016-06-30 10:50:33,186 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 98.80
+2016-06-30 10:50:33,349 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:33,894 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 69
+2016-06-30 10:50:34,097 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 65.55
+2016-06-30 10:50:34,192 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:34,686 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 390
+2016-06-30 10:50:34,928 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 370.50
+2016-06-30 10:50:35,423 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:36,440 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 390
+2016-06-30 10:50:36,850 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 370.50
+2016-06-30 10:50:36,982 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:37,533 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 89
+2016-06-30 10:50:37,790 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 84.55
+2016-06-30 10:50:37,939 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:38,347 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 89
+2016-06-30 10:50:38,559 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 84.55
+2016-06-30 10:50:38,669 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:39,116 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 99
+2016-06-30 10:50:39,686 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 94.05
+2016-06-30 10:50:39,902 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:40,423 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 23
+2016-06-30 10:50:40,746 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 22.31
+2016-06-30 10:50:40,849 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 3.0
+2016-06-30 10:50:41,224 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 300
+2016-06-30 10:50:41,416 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 285
+2016-06-30 10:50:41,503 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:41,839 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 85
+2016-06-30 10:50:42,014 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 80.75
+2016-06-30 10:50:42,123 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:42,530 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 293
+2016-06-30 10:50:42,716 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 278.35
+2016-06-30 10:50:42,816 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:43,187 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 27
+2016-06-30 10:50:43,387 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 25.92
+2016-06-30 10:50:43,501 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 4.0
+2016-06-30 10:50:43,914 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 115
+2016-06-30 10:50:44,092 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 110.40
+2016-06-30 10:50:44,186 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 4.0
+2016-06-30 10:50:44,557 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 89
+2016-06-30 10:50:44,733 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 85.44
+2016-06-30 10:50:44,836 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 4.0
+2016-06-30 10:50:45,383 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 80
+2016-06-30 10:50:45,695 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 76
+2016-06-30 10:50:45,852 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:46,365 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 27
+2016-06-30 10:50:46,543 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 25.92
+2016-06-30 10:50:46,628 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 4.0
+2016-06-30 10:50:47,098 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 90
+2016-06-30 10:50:47,363 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 85.50
+2016-06-30 10:50:47,561 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:47,926 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 80
+2016-06-30 10:50:48,107 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 76
+2016-06-30 10:50:48,198 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:48,582 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 229
+2016-06-30 10:50:48,759 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 217.55
+2016-06-30 10:50:48,845 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:49,246 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 119
+2016-06-30 10:50:49,417 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 113.05
+2016-06-30 10:50:49,506 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 5.0
+2016-06-30 10:50:49,909 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 195
+2016-06-30 10:50:50,095 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 187.20
+2016-06-30 10:50:50,180 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 4.0
+2016-06-30 10:50:50,579 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Original Product Price is Rs. 195
+2016-06-30 10:50:50,774 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Discount Product Price is Rs. 187.20
+2016-06-30 10:50:50,873 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] % discounted is: 4.0
+2016-06-30 10:50:50,945 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] PASS
+2016-06-30 10:50:50,945 DEBUG [SearchProductAndFilterByDiscountTest_UPTO 5%_1] Ending SearchProductAndFilterByDiscountTest_UPTO 5%_1

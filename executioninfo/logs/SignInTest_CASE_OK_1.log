@@ -1,16 +1,16 @@
-2016-06-29 08:04:00,302 DEBUG [SignInTest_CASE_OK_1] Starting SignInTest_CASE_OK_1
-2016-06-29 08:04:00,304 DEBUG [SignInTest_CASE_OK_1] Executing SignInTest_CASE_OK_1 using {Case=CASE_OK, Email Address=srinimarva@gmail.com, Alert Message=, Password=Orange@32, Runmode=Y, Iteration=1, Customer Name=SRINIVASAN, Browser=Chrome}
-2016-06-29 08:04:00,305 DEBUG [SignInTest_CASE_OK_1] Starting function openBrowser - Chrome
-2016-06-29 08:04:00,305 DEBUG [SignInTest_CASE_OK_1] {Mozilla=null, Chrome=null, IE=null}
-2016-06-29 08:04:00,305 DEBUG [SignInTest_CASE_OK_1] Opening fresh browser - Chrome
-2016-06-29 08:04:05,865 DEBUG [SignInTest_CASE_OK_1] Starting connectURL function trying to connect http://www.bigbasket.com
-2016-06-29 08:04:15,874 DEBUG [SignInTest_CASE_OK_1] Ending connectURL function PASS
-2016-06-29 08:04:15,910 DEBUG [SignInTest_CASE_OK_1] Starting function clickSkipAndExplore in HomePage.class
-2016-06-29 08:04:19,491 DEBUG [SignInTest_CASE_OK_1] Ending function clickSkipAndExplore in HomePage.class with PASS
-2016-06-29 08:04:19,491 DEBUG [SignInTest_CASE_OK_1] Starting function clickLOGINLink in HomePage.class
-2016-06-29 08:04:22,914 DEBUG [SignInTest_CASE_OK_1] Ending function clickLOGINLink in HomePage.class with PASS
-2016-06-29 08:04:22,955 DEBUG [SignInTest_CASE_OK_1] Starting doLogin function in SignInPage.class
-2016-06-29 08:04:40,553 DEBUG [SignInTest_CASE_OK_1] Ending doLogin function in SignInPage.class
-2016-06-29 08:04:40,600 DEBUG [SignInTest_CASE_OK_1] Starting function verifyIfLoginSuccess in HomePage.class
-2016-06-29 08:04:40,750 DEBUG [SignInTest_CASE_OK_1] Ending function verifyIfLoginSuccess in HomePage.class PASS
-2016-06-29 08:04:40,750 DEBUG [SignInTest_CASE_OK_1] Ending SignInTest_CASE_OK_1
+2016-06-30 10:50:20,844 DEBUG [SignInTest_CASE_OK_1] Starting SignInTest_CASE_OK_1
+2016-06-30 10:50:20,844 DEBUG [SignInTest_CASE_OK_1] Executing SignInTest_CASE_OK_1 using {Case=CASE_OK, Email Address=srinimarva@gmail.com, Alert Message=, Password=Orange@32, Runmode=Y, Iteration=1, Customer Name=SRINIVASAN, Browser=Chrome}
+2016-06-30 10:50:20,844 DEBUG [SignInTest_CASE_OK_1] Starting function openBrowser - Chrome
+2016-06-30 10:50:20,844 DEBUG [SignInTest_CASE_OK_1] {Mozilla=null, Chrome=null, IE=null}
+2016-06-30 10:50:20,844 DEBUG [SignInTest_CASE_OK_1] Opening fresh browser - Chrome
+2016-06-30 10:50:24,711 DEBUG [SignInTest_CASE_OK_1] Starting connectURL function trying to connect http://www.bigbasket.com
+2016-06-30 10:50:28,916 DEBUG [SignInTest_CASE_OK_1] Ending connectURL function PASS
+2016-06-30 10:50:28,917 DEBUG [SignInTest_CASE_OK_1] Starting function clickSkipAndExplore in HomePage.class
+2016-06-30 10:50:33,750 DEBUG [SignInTest_CASE_OK_1] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-30 10:50:33,751 DEBUG [SignInTest_CASE_OK_1] Starting function clickLOGINLink in HomePage.class
+2016-06-30 10:50:39,199 DEBUG [SignInTest_CASE_OK_1] Ending function clickLOGINLink in HomePage.class with PASS
+2016-06-30 10:50:39,208 DEBUG [SignInTest_CASE_OK_1] Starting doLogin function in SignInPage.class
+2016-06-30 10:50:56,930 DEBUG [SignInTest_CASE_OK_1] Ending doLogin function in SignInPage.class
+2016-06-30 10:50:56,953 DEBUG [SignInTest_CASE_OK_1] Starting function verifyIfLoginSuccess in HomePage.class
+2016-06-30 10:50:57,073 DEBUG [SignInTest_CASE_OK_1] Ending function verifyIfLoginSuccess in HomePage.class PASS
+2016-06-30 10:50:57,073 DEBUG [SignInTest_CASE_OK_1] Ending SignInTest_CASE_OK_1

@@ -34,7 +34,7 @@ public class SearchAndFilterProductsTest extends BaseTest{
 		
 		//Checking the Run Modes of a given test suite, test cases within the suite and test data records of the test cases
 		Xls_Reader xls = new Xls_Reader(Constants.SUITEPRODUCTS_XLS_PATH);
-		int rowNum = xls.getCellRowNum(Constants.TEST_CASES_SHEET, Constants.TEST_CASE_ID_COL, testName);
+		int rowNum = xls.getCellRowNum(Constants.TEST_CASES_SHEET, Constants.TEST_CASE_NAME_COL, testName);
 		String currentTestName = testName+"_"+testDataRecord.get(Constants.CASE_COL)+"_"+testDataRecord.get(Constants.ITERATION_COL);
 		String testDescription = xls.getCellData(Constants.TEST_CASES_SHEET, Constants.TEST_DESCRIPTION_COL, rowNum);
 		testReporter = reporter.startTest(currentTestName, testDescription);
@@ -85,6 +85,15 @@ public class SearchAndFilterProductsTest extends BaseTest{
 		case "Rs 51 to Rs 100":
 			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Price Range and verify if the Search Results are within the Price Range selected", searchResultsPage.verifySearchResultsByPriceRange(log, browser, 51, 100));
 			break;
+		case "Rs 101 to Rs 200":
+			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Price Range and verify if the Search Results are within the Price Range selected", searchResultsPage.verifySearchResultsByPriceRange(log, browser, 101, 200));
+			break;
+		case "Rs 201 to Rs 500":
+			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Price Range and verify if the Search Results are within the Price Range selected", searchResultsPage.verifySearchResultsByPriceRange(log, browser, 201, 500));
+			break;
+		case "> Rs 501":
+			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Price Range and verify if the Search Results are within the Price Range selected", searchResultsPage.verifySearchResultsByPriceRange(log, browser, 501, 9999));
+			break;
 		}
 		
 		//Ending the test
@@ -98,7 +107,7 @@ public class SearchAndFilterProductsTest extends BaseTest{
 		
 		//Checking the Run Modes of a given test suite, test cases within the suite and test data records of the test cases
 		Xls_Reader xls = new Xls_Reader(Constants.SUITEPRODUCTS_XLS_PATH);
-		int rowNum = xls.getCellRowNum(Constants.TEST_CASES_SHEET, Constants.TEST_CASE_ID_COL, testName);
+		int rowNum = xls.getCellRowNum(Constants.TEST_CASES_SHEET, Constants.TEST_CASE_NAME_COL, testName);
 		String currentTestName = testName+"_"+testDataRecord.get(Constants.CASE_COL)+"_"+testDataRecord.get(Constants.ITERATION_COL);
 		String testDescription = xls.getCellData(Constants.TEST_CASES_SHEET, Constants.TEST_DESCRIPTION_COL, rowNum);
 		testReporter = reporter.startTest(currentTestName, testDescription);
@@ -137,23 +146,23 @@ public class SearchAndFilterProductsTest extends BaseTest{
 		searchResultsPage = searchResultsPage.searchProduct(log, browser, testDataRecord.get("Product Name"));
 		
 		//Filter by price range and verify the filter results
-		searchResultsPage = searchResultsPage.filterByDiscounts(browser, testDataRecord.get("Discount Range"));
-		//searchResultsPage.verifySearchResultsByDiscountsRange(5);
+		searchResultsPage = searchResultsPage.filterByDiscounts(log, browser, testDataRecord.get("Discount Range"));
+		
 		switch(testDataRecord.get("Case")){
 		case "UPTO 5%":
-			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Discount Range and verify if the Search Results are within the Discount Range selected", searchResultsPage.verifySearchResultsByDiscountsRange(browser, 0, 5));
+			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Discount Range and verify if the Search Results are within the Discount Range selected", searchResultsPage.verifySearchResultsByDiscountsRange(log, browser, 0, 5));
 			break;
 		case "5% - 10%":
-			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Discount Range and verify if the Search Results are within the Discount Range selected", searchResultsPage.verifySearchResultsByDiscountsRange(browser, 5, 10));
+			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Discount Range and verify if the Search Results are within the Discount Range selected", searchResultsPage.verifySearchResultsByDiscountsRange(log, browser, 5, 10));
 			break;
 		case "10% - 15%":
-			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Discount Range and verify if the Search Results are within the Discount Range selected", searchResultsPage.verifySearchResultsByDiscountsRange(browser, 10, 15));
+			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Discount Range and verify if the Search Results are within the Discount Range selected", searchResultsPage.verifySearchResultsByDiscountsRange(log, browser, 10, 15));
 			break;
 		case "15% - 25%":
-			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Discount Range and verify if the Search Results are within the Discount Range selected", searchResultsPage.verifySearchResultsByDiscountsRange(browser, 15, 25));
+			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Discount Range and verify if the Search Results are within the Discount Range selected", searchResultsPage.verifySearchResultsByDiscountsRange(log, browser, 15, 25));
 			break;
 		case "MORE THAN 25%":
-			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Discount Range and verify if the Search Results are within the Discount Range selected", searchResultsPage.verifySearchResultsByDiscountsRange(browser, 25, 99));
+			utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter by Discount Range and verify if the Search Results are within the Discount Range selected", searchResultsPage.verifySearchResultsByDiscountsRange(log, browser, 25, 99));
 			break;
 		}
 		

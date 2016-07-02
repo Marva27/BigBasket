@@ -1,20 +1,20 @@
-2016-06-29 08:05:45,163 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting SignInTest_CASE_GOOGLE_LOGIN_7
-2016-06-29 08:05:45,163 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Executing SignInTest_CASE_GOOGLE_LOGIN_7 using {Case=CASE_GOOGLE_LOGIN, Email Address=srinimarva@gmail.com, Alert Message=, Password=Orange@27, Runmode=Y, Iteration=7, Customer Name=Srinivasan, Browser=Chrome}
-2016-06-29 08:05:45,163 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function openBrowser - Chrome
-2016-06-29 08:05:45,163 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] {Mozilla=null, Chrome=RemoteWebDriver: chrome on MAC (53cc9652-002d-42da-bbf2-9eb12115cd62), IE=null}
-2016-06-29 08:05:45,164 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Using existing browser - Chrome
-2016-06-29 08:05:45,307 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting connectURL function trying to connect http://www.bigbasket.com
-2016-06-29 08:05:47,182 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending connectURL function PASS
-2016-06-29 08:05:47,183 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function clickSkipAndExplore in HomePage.class
-2016-06-29 08:05:50,629 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending function clickSkipAndExplore in HomePage.class with PASS
-2016-06-29 08:05:50,629 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function clickLOGINLink in HomePage.class
-2016-06-29 08:05:52,574 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending function clickLOGINLink in HomePage.class with PASS
-2016-06-29 08:05:52,576 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function clickLoginWithGoogle in SignInPage.class
-2016-06-29 08:05:53,958 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending function clickLoginWithGoogle in SignInPage.class
-2016-06-29 08:05:53,973 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function enterEmailAndClickNext in GmailLoginPage1.class
-2016-06-29 08:05:54,316 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending function enterEmailAndClickNext in GmailLoginPage1.class
-2016-06-29 08:05:54,318 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function enterPasswordAndClickNext in GmailLoginPage2.class
-2016-06-29 08:05:55,134 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending function enterPasswordAndClickNext in GmailLoginPage2.class
-2016-06-29 08:05:55,135 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function verifyIfLoginSuccess in HomePage.class
-2016-06-29 08:06:11,004 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending function verifyIfLoginSuccess in HomePage.class PASS
-2016-06-29 08:06:11,020 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending SignInTest_CASE_GOOGLE_LOGIN_7
+2016-06-30 10:51:57,071 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting SignInTest_CASE_GOOGLE_LOGIN_7
+2016-06-30 10:51:57,071 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Executing SignInTest_CASE_GOOGLE_LOGIN_7 using {Case=CASE_GOOGLE_LOGIN, Email Address=srinimarva@gmail.com, Alert Message=, Password=Orange@27, Runmode=Y, Iteration=7, Customer Name=Srinivasan, Browser=Chrome}
+2016-06-30 10:51:57,071 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function openBrowser - Chrome
+2016-06-30 10:51:57,071 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] {Mozilla=null, Chrome=RemoteWebDriver: chrome on MAC (9daf47b5-5017-4a48-a736-d5b6a1bed306), IE=null}
+2016-06-30 10:51:57,071 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Using existing browser - Chrome
+2016-06-30 10:51:57,238 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting connectURL function trying to connect http://www.bigbasket.com
+2016-06-30 10:52:00,234 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending connectURL function PASS
+2016-06-30 10:52:00,234 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function clickSkipAndExplore in HomePage.class
+2016-06-30 10:52:02,964 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-06-30 10:52:02,964 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function clickLOGINLink in HomePage.class
+2016-06-30 10:52:05,120 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending function clickLOGINLink in HomePage.class with PASS
+2016-06-30 10:52:05,130 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function clickLoginWithGoogle in SignInPage.class
+2016-06-30 10:52:07,505 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending function clickLoginWithGoogle in SignInPage.class
+2016-06-30 10:52:07,533 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function enterEmailAndClickNext in GmailLoginPage1.class
+2016-06-30 10:52:07,995 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending function enterEmailAndClickNext in GmailLoginPage1.class
+2016-06-30 10:52:07,997 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function enterPasswordAndClickNext in GmailLoginPage2.class
+2016-06-30 10:52:08,997 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending function enterPasswordAndClickNext in GmailLoginPage2.class
+2016-06-30 10:52:08,998 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Starting function verifyIfLoginSuccess in HomePage.class
+2016-06-30 10:52:17,901 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending function verifyIfLoginSuccess in HomePage.class PASS
+2016-06-30 10:52:17,910 DEBUG [SignInTest_CASE_GOOGLE_LOGIN_7] Ending SignInTest_CASE_GOOGLE_LOGIN_7

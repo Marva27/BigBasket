@@ -217,8 +217,8 @@ public class SearchAndFilterProductsTest extends BaseTest{
 		utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 4", "Search a Product and verify the Search Results", searchResultsPage.verifySearchResults(testDataRecord.get("Product Name")));
 		
 		//Filter by brands and verify the filter results
-		utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter the products by Brands", searchResultsPage.filterByBrands(browser, testDataRecord.get("Brands")));
-		utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Verify the filter results are within the Brands selected",searchResultsPage.verifyFilterByBrands(testDataRecord.get("Brands")));
+		utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter the products by Brands", searchResultsPage.filterByBrands(log, browser, testDataRecord.get("Brands")));
+		utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Verify the filter results are within the Brands selected",searchResultsPage.verifyFilterByBrands(log, testDataRecord.get("Brands")));
 		
 		//Ending the test
 		log.debug("Ending "+currentTestName);

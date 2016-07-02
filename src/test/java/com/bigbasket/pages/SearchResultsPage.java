@@ -120,7 +120,8 @@ public class SearchResultsPage {
 		}
 	}
 	
-	public String filterByBrands(WebDriver browser, String brands){
+	public String filterByBrands(Logger log, WebDriver browser, String brands){
+		UtilFunctions.writeLog(log, "Starting function filterByBrands in SearchResultsPage.class");
 		String[] listOfBrands = brands.split(",");
 		boolean brandNotFound = true;
 		Actions actions = new Actions(browser);
@@ -142,16 +143,20 @@ public class SearchResultsPage {
 					brandNotFound = true;
 				}
 				if(brandNotFound){
+					UtilFunctions.writeLog(log, "Ending function filterByBrands in SearchResultsPage.class with "+Constants.ERROR+" - Brand NOT found");
 					return Constants.ERROR+"-"+listOfBrands[i]+" brand NOT found";
 				}
 			}
+			UtilFunctions.writeLog(log, "Ending function filterByBrands in SearchResultsPage.class with "+Constants.PASS);
 			return Constants.PASS;
 		}catch(Exception e){
+			UtilFunctions.writeLog(log, "Ending function filterByBrands in SearchResultsPage.class with "+Constants.ERROR+" "+e.getMessage());
 		}
 		return brands;
 	}
 	
-	public String verifyFilterByBrands(String brands){
+	public String verifyFilterByBrands(Logger log, String brands){
+		UtilFunctions.writeLog(log, "Starting function verifyFilterByBrands in SearchResultsPage.class");
 		boolean filterWorks = true;
 		String currentBrandName = null;
 		try{
@@ -163,11 +168,14 @@ public class SearchResultsPage {
 				}
 			}
 			if(filterWorks){
+				UtilFunctions.writeLog(log, "Ending function verifyFilterByBrands in SearchResultsPage.class with "+Constants.PASS);
 				return Constants.PASS;
 			}else{
+				UtilFunctions.writeLog(log, "Ending function verifyFilterByBrands in SearchResultsPage.class with "+Constants.FAIL+"- Brand "+currentBrandName+" is out of filter range");
 				return Constants.FAIL+"- Brand "+currentBrandName+" is out of filter range";
 			}
 		}catch(Exception e){
+			UtilFunctions.writeLog(log, "Ending function verifyFilterByBrands in SearchResultsPage.class with "+Constants.ERROR+" - "+e.getMessage());
 			return Constants.ERROR;
 		}
 	}

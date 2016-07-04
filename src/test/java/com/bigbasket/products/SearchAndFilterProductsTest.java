@@ -177,7 +177,7 @@ public class SearchAndFilterProductsTest extends BaseTest{
 		
 		//Checking the Run Modes of a given test suite, test cases within the suite and test data records of the test cases
 		Xls_Reader xls = new Xls_Reader(Constants.SUITEPRODUCTS_XLS_PATH);
-		int rowNum = xls.getCellRowNum(Constants.TEST_CASES_SHEET, Constants.TEST_CASE_ID_COL, testName);
+		int rowNum = xls.getCellRowNum(Constants.TEST_CASES_SHEET, Constants.TEST_CASE_NAME_COL, testName);
 		String currentTestName = testName+"_"+testDataRecord.get(Constants.CASE_COL)+"_"+testDataRecord.get(Constants.ITERATION_COL);
 		String testDescription = xls.getCellData(Constants.TEST_CASES_SHEET, Constants.TEST_DESCRIPTION_COL, rowNum);
 		testReporter = reporter.startTest(currentTestName, testDescription);
@@ -219,6 +219,54 @@ public class SearchAndFilterProductsTest extends BaseTest{
 		//Filter by brands and verify the filter results
 		utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Filter the products by Brands", searchResultsPage.filterByBrands(log, browser, testDataRecord.get("Brands")));
 		utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 5", "Verify the filter results are within the Brands selected",searchResultsPage.verifyFilterByBrands(log, testDataRecord.get("Brands")));
+		
+		//Ending the test
+		log.debug("Ending "+currentTestName);
+		reporter.endTest(testReporter);
+	}
+	
+	@Test(dataProviderClass=TestCaseDataProvider.class,dataProvider="getDataForProductsSuite")
+	public void SearchProductAndFilterByPackSizeTest(Hashtable<String, String> testDataRecord) throws IOException, InterruptedException{
+		String testName = "SearchProductAndFilterByPackSizeTest";
+		
+		//Checking the Run Modes of a given test suite, test cases within the suite and test data records of the test cases
+		Xls_Reader xls = new Xls_Reader(Constants.SUITEPRODUCTS_XLS_PATH);
+		int rowNum = xls.getCellRowNum(Constants.TEST_CASES_SHEET, Constants.TEST_CASE_NAME_COL, testName);
+		String currentTestName = testName+"_"+testDataRecord.get(Constants.CASE_COL)+"_"+testDataRecord.get(Constants.ITERATION_COL);
+		String testDescription = xls.getCellData(Constants.TEST_CASES_SHEET, Constants.TEST_DESCRIPTION_COL, rowNum);
+		testReporter = reporter.startTest(currentTestName, testDescription);
+		Utility.checkRunModes("Products", testName, testDataRecord, xls, reporter, testReporter);
+		
+		//Logs
+		Logger log = Utility.initLogs(currentTestName);
+		log.debug("Starting "+currentTestName);
+										
+		utilFunctions = UtilFunctions.getInstance(testName);
+		utilFunctions.setLogger(log);
+										
+		log.debug("Executing "+currentTestName+" using "+testDataRecord.toString());
+								
+		//Executing the test case if the run mode is found to be YES
+		testReporter.log(LogStatus.INFO, "Test Data", "Starting the test "+currentTestName+" using test data "+testDataRecord.toString());
+				
+		//Opening the required browser
+		browser = utilFunctions.openBrowser(testDataRecord.get("Browser"),project.getProperty("platform"));
+			if(browser!=null){
+				utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 1", "Launch the required browser", Constants.PASS);
+			}else{
+				utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 1", "Launch the required browser", Constants.ERROR);
+			}
+				
+		//Connecting to test site URL		
+		String stepResult = utilFunctions.connectURL(project.getProperty("testSiteURL"));
+		utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 2", "Connect to http://www.bigbasket.com", stepResult);
+				
+		//Click Skip and Explore button
+		homePage = PageFactory.initElements(browser, HomePage.class);
+		utilFunctions.writeHTMLResult(currentTestName, browser, reporter, testReporter, "Step 3", "Click the Skip and Explore button", homePage.clickSkipAndExplore(log));
+		homePage = PageFactory.initElements(browser, HomePage.class);
+		
+		homePage.selectCategory(log, browser, testDataRecord);
 		
 		//Ending the test
 		log.debug("Ending "+currentTestName);

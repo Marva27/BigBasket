@@ -1,9 +1,13 @@
 package com.bigbasket.pages;
 
+import java.util.Hashtable;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -25,6 +29,12 @@ public class HomePage {
 	
 	@FindBy(xpath="//*[@id='member_account']")
 	WebElement mnuMyAccount;
+	
+	@FindAll({@FindBy(xpath=".//*[@id='basket_menu']/ul/li/a")})
+	List<WebElement> mnuMainCategory;
+	
+	@FindAll({@FindBy(xpath="//*[contains(@id,'menu-')][not(contains(@style,'display:none'))]/div/div/ul/li/a")})
+	List<WebElement> mnuSubCategory1;
 	
 	public String clickSkipAndExplore(Logger log){
 		UtilFunctions.writeLog(log, "Starting function clickSkipAndExplore in HomePage.class");
@@ -108,6 +118,24 @@ public class HomePage {
 		}catch(Exception e){
 			UtilFunctions.writeLog(log, "Ending function selectMyAccount in MyAccountPage.class with "+Constants.ERROR+"-"+e.getMessage());
 			return null;
+		}
+	}
+	
+	public void selectCategory(Logger log, WebDriver browser, Hashtable<String, String> testDataRecord){
+		try{
+			Actions actions = new Actions(browser);
+			for(WebElement mainMenuElement: mnuMainCategory){
+				if(testDataRecord.get("MainCategory").equals(mainMenuElement.getText())){
+					actions.moveToElement(mainMenuElement).build().perform();
+					PageFactory.initElements(browser, HomePage.class);
+					System.out.println(mnuSubCategory1.size());
+					for(WebElement subMenu1Element: mnuSubCategory1){
+						System.out.println(subMenu1Element.getText());
+					}
+				}
+			}
+		}catch(Exception e){
+			System.out.println(e.getMessage());
 		}
 	}
 

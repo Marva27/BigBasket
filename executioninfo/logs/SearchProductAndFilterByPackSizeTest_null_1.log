@@ -1,7 +1,9 @@
-2016-07-03 09:38:10,374 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Starting SearchProductAndFilterByPackSizeTest_null_1
-2016-07-03 09:38:10,375 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Executing SearchProductAndFilterByPackSizeTest_null_1 using {Runmode=Y, Iteration=1, MainCategory=PERSONAL CARE, SubCategory2=Mens Deos, SubCategory1=Deos & Perfumes, Browser=Chrome}
-2016-07-03 09:38:10,375 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Starting function openBrowser - Chrome
-2016-07-03 09:38:10,375 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] {Mozilla=null, Chrome=null, IE=null}
-2016-07-03 09:38:10,375 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Opening fresh browser - Chrome
-2016-07-03 09:38:18,893 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Starting function clickSkipAndExplore in HomePage.class
-2016-07-03 09:38:22,657 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-07-06 12:45:35,846 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Starting SearchProductAndFilterByPackSizeTest_null_1
+2016-07-06 12:45:35,847 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Executing SearchProductAndFilterByPackSizeTest_null_1 using {Runmode=Y, Iteration=1, MainCategory=PERSONAL CARE, SubCategory2=Mens Deos, SubCategory1=Deos & Perfumes, Browser=Chrome}
+2016-07-06 12:45:35,847 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Starting function openBrowser - Chrome
+2016-07-06 12:45:35,848 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] {Mozilla=null, Chrome=null, IE=null}
+2016-07-06 12:45:35,848 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Opening fresh browser - Chrome
+2016-07-06 12:45:44,553 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Starting function clickSkipAndExplore in HomePage.class
+2016-07-06 12:45:47,338 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Ending function clickSkipAndExplore in HomePage.class with PASS
+2016-07-06 12:45:47,341 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Starting function selectCategory in HomePage.class
+2016-07-06 12:45:58,477 DEBUG [SearchProductAndFilterByPackSizeTest_null_1] Main category selected was: PERSONAL CARE

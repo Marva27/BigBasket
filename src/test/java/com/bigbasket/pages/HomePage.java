@@ -33,8 +33,11 @@ public class HomePage {
 	@FindAll({@FindBy(xpath=".//*[@id='basket_menu']/ul/li/a")})
 	List<WebElement> mnuMainCategory;
 	
-	@FindAll({@FindBy(xpath="//*[contains(@id,'menu-')][not(contains(@style,'display:none'))]/div/div/ul/li/a")})
+	@FindAll({@FindBy(xpath="//*[contains(@id,'menu-')][not(contains(@style,'display:none'))]/div/div/ul/li/a[@class='maintainHover']")})
 	List<WebElement> mnuSubCategory1;
+	
+	@FindAll({@FindBy(xpath="//*[contains(@id,'menu-')][not(contains(@style,'display:none'))]/div/div[2]/ul/li/div/ul/li/a[@class='maintainHover'][not(contains(@style,'display:none'))]")})
+	List<WebElement> mnuSubCategory2;
 	
 	public String clickSkipAndExplore(Logger log){
 		UtilFunctions.writeLog(log, "Starting function clickSkipAndExplore in HomePage.class");
@@ -122,20 +125,35 @@ public class HomePage {
 	}
 	
 	public void selectCategory(Logger log, WebDriver browser, Hashtable<String, String> testDataRecord){
+		boolean isCategoryFound = false;
+		UtilFunctions.writeLog(log, "Starting function selectCategory in HomePage.class");
 		try{
 			Actions actions = new Actions(browser);
 			for(WebElement mainMenuElement: mnuMainCategory){
 				if(testDataRecord.get("MainCategory").equals(mainMenuElement.getText())){
+					isCategoryFound = true;
+					UtilFunctions.writeLog(log, "Main category selected was: "+mainMenuElement.getText());
 					actions.moveToElement(mainMenuElement).build().perform();
 					PageFactory.initElements(browser, HomePage.class);
-					System.out.println(mnuSubCategory1.size());
 					for(WebElement subMenu1Element: mnuSubCategory1){
-						System.out.println(subMenu1Element.getText());
+						if(testDataRecord.get("SubCategory1").equals(subMenu1Element.getText())){
+							if(testDataRecord.get("SubCategory2").equals("")){
+								UtilFunctions.writeLog(log, "Sub category 1 selected was: "+subMenu1Element.getText());
+								actions.moveToElement(subMenu1Element).click().build().perform();
+							}else{
+								actions.moveToElement(subMenu1Element).build().perform();
+								PageFactory.initElements(browser, HomePage.class);
+								System.out.println(mnuSubCategory2.size());
+								for(WebElement subMenu2Element: mnuSubCategory2){
+									System.out.println(subMenu2Element.getText());
+								}
+							}
+						}
 					}
 				}
 			}
 		}catch(Exception e){
-			System.out.println(e.getMessage());
+			UtilFunctions.writeLog(log,"Ending function selectCategory in HomePage.class with "+Constants.ERROR+" - "+e.getMessage());
 		}
 	}
 
